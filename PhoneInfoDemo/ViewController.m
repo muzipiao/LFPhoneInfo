@@ -63,7 +63,7 @@
     //CPU类型
     self.labelArray[8].text = [NSString stringWithFormat:@"CPU类型为：%@",[self getCPUKind]];
     //是否被破解jailbroken
-    NSString *jailStr = [self jailbroken]?@"是":@"否";
+    NSString *jailStr = [self isJailbreak]?@"是":@"否";
     self.labelArray[9].text = [NSString stringWithFormat:@"是否被破解：%@",jailStr];
     //网络状态
     self.labelArray[10].text = [NSString stringWithFormat:@"运营商为：%@",[self getNetWorkInfo]];
@@ -226,6 +226,34 @@
 }
 
 #pragma mark - 是否被破解
+- (BOOL)isJailbreak {
+    static BOOL isjbroken = NO;
+    if (isjbroken) {
+        return isjbroken;
+    }
+    @try {
+        NSArray *paths = [NSArray arrayWithObjects:
+                          @"/User/Applications/",
+                          @"/Applications/Cydia.app",
+                          @"/Library/MobileSubstrate/MobileSubstrate.dylib",
+                          @"/bin/bash",
+                          @"/usr/sbin/sshd",
+                          @"/etc/apt",
+                          nil];
+        
+        for (NSString *one in paths) {
+            if ([[NSFileManager defaultManager] fileExistsAtPath:one]) {
+                isjbroken = YES;
+            }
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"Jailbroken exception:%@",exception);
+    }
+    
+    return isjbroken;
+}
+
+
 // 是否越狱
 - (BOOL)jailbroken
 {
