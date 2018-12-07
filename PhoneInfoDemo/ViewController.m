@@ -59,7 +59,7 @@
     //本机手机号码
     self.labelArray[6].text = [NSString stringWithFormat:@"本机手机号码为：%@",[self getPlistPhoneNum]];
     //运行内存
-    self.labelArray[7].text = [NSString stringWithFormat:@"计算出的内存为：%fMB",[self getMemoryMB]];
+    self.labelArray[7].text = [NSString stringWithFormat:@"手机内存：%lldMB，应用占用内存：%lldMB",[self totalMemorySize],[self getMemoryMB]];
     //CPU类型
     self.labelArray[8].text = [NSString stringWithFormat:@"CPU类型为：%@",[self getCPUKind]];
     //是否被破解jailbroken
@@ -67,8 +67,8 @@
     self.labelArray[9].text = [NSString stringWithFormat:@"是否被破解：%@",jailStr];
     //网络状态
     self.labelArray[10].text = [NSString stringWithFormat:@"运营商为：%@",[self getNetWorkInfo]];
-    //当前IP
-    self.labelArray[11].text = [NSString stringWithFormat:@"当前IP为：%@",[self getIPAddress:NO]];
+    //当前IP，准确的 IP 地址应该从后台获取
+    self.labelArray[11].text = [NSString stringWithFormat:@"当前局域网IP为：%@",[self getIPAddress:NO]];
     //应用序列号
     self.labelArray[12].text = [NSString stringWithFormat:@"设备序列号为：%@",[self getUUID]];
     //应用创建实际和更新时间
@@ -474,18 +474,24 @@
 
 
 #pragma mark - 获取运行内存
--(double)getMemoryMB{
-    vm_statistics_data_t vmStats;
-    mach_msg_type_number_t infoCount = HOST_VM_INFO_COUNT;
-    kern_return_t kernReturn = host_statistics(mach_host_self(), HOST_VM_INFO, (host_info_t)&vmStats, &infoCount);
-    
-    if (kernReturn != KERN_SUCCESS)
-    {
-        return NSNotFound;
+// 应用运行占用的内存
+- (int64_t)getMemoryMB {
+    int64_t memoryUsageInByte = 0;
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t kernelReturn = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t) &vmInfo, &count);
+    if(kernelReturn == KERN_SUCCESS) {
+        memoryUsageInByte = (int64_t) vmInfo.phys_footprint;
+        NSLog(@"Memory in use (in bytes): %lld", memoryUsageInByte);
+    } else {
+        NSLog(@"Error with task_info(): %s", mach_error_string(kernelReturn));
     }
-    double mem = (vm_page_size * vmStats.free_count) + (vmStats.inactive_count * vm_page_size);
-    
-    return mem/1024.0/1024.0;
+    return memoryUsageInByte/(1024.0*1024.0);
+}
+
+// 设备总内存
+-(int64_t)totalMemorySize{
+    return [NSProcessInfo processInfo].physicalMemory;
 }
 
 
@@ -542,6 +548,7 @@
 
 
 #pragma mark - 获取运营商
+// 通过系统框架获取，不准确
 - (NSString *)getCarrierInfo{
     CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
@@ -549,7 +556,7 @@
     return carrierName;
 };
 
-//获取运营商信息；例如，中国移动/中国联通/中国电信/运营商
+//通过左上角显示获取运营商信息；例如，中国移动/中国联通/中国电信/运营商
 -(NSString *)serviceCompany{
     NSArray *infoArray = [[[[UIApplication sharedApplication] valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
     
@@ -632,11 +639,25 @@
     if ([platform isEqualToString:@"iPhone8,4"]) return @"iPhone SE";
     if ([platform isEqualToString:@"iPhone9,1"]) return @"iPhone 7";
     if ([platform isEqualToString:@"iPhone9,2"]) return @"iPhone 7 Plus";
+    if ([platform isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
+    if ([platform isEqualToString:@"iPhone9,4"])    return @"iPhone 7 Plus";
+    if ([platform isEqualToString:@"iPhone10,1"])   return @"iPhone 8";
+    if ([platform isEqualToString:@"iPhone10,4"])   return @"iPhone 8";
+    if ([platform isEqualToString:@"iPhone10,2"])   return @"iPhone 8 Plus";
+    if ([platform isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";
+    if ([platform isEqualToString:@"iPhone10,3"])   return @"iPhone X";
+    if ([platform isEqualToString:@"iPhone10,6"])   return @"iPhone X";
+    if ([platform isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
+    if ([platform isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
+    
     if ([platform isEqualToString:@"iPod1,1"])  return @"iPod Touch 1G";
     if ([platform isEqualToString:@"iPod2,1"])  return @"iPod Touch 2G";
     if ([platform isEqualToString:@"iPod3,1"])  return @"iPod Touch 3G";
     if ([platform isEqualToString:@"iPod4,1"])  return @"iPod Touch 4G";
     if ([platform isEqualToString:@"iPod5,1"])  return @"iPod Touch 5G";
+    
     if ([platform isEqualToString:@"iPad1,1"])  return @"iPad 1G";
     if ([platform isEqualToString:@"iPad2,1"])  return @"iPad 2";
     if ([platform isEqualToString:@"iPad2,2"])  return @"iPad 2";
@@ -657,8 +678,32 @@
     if ([platform isEqualToString:@"iPad4,4"])  return @"iPad Mini 2G";
     if ([platform isEqualToString:@"iPad4,5"])  return @"iPad Mini 2G";
     if ([platform isEqualToString:@"iPad4,6"])  return @"iPad Mini 2G";
-    if ([platform isEqualToString:@"i386"])      return @"iPhone Simulator";
-    if ([platform isEqualToString:@"x86_64"])    return @"iPhone Simulator";
+    if ([platform isEqualToString:@"iPad4,7"])  return @"iPad Mini 3";
+    if ([platform isEqualToString:@"iPad4,8"])  return @"iPad Mini 3";
+    if ([platform isEqualToString:@"iPad4,9"])  return @"iPad Mini 3";
+    if ([platform isEqualToString:@"iPad5,1"])  return @"iPad Mini 4 (WiFi)";
+    if ([platform isEqualToString:@"iPad5,2"])  return @"iPad Mini 4 (LTE)";
+    if ([platform isEqualToString:@"iPad5,3"])  return @"iPad Air 2";
+    if ([platform isEqualToString:@"iPad5,4"])  return @"iPad Air 2";
+    if ([platform isEqualToString:@"iPad6,3"])  return @"iPad Pro 9.7";
+    if ([platform isEqualToString:@"iPad6,4"])  return @"iPad Pro 9.7";
+    if ([platform isEqualToString:@"iPad6,7"])  return @"iPad Pro 12.9";
+    if ([platform isEqualToString:@"iPad6,8"])  return @"iPad Pro 12.9";
+    if ([platform isEqualToString:@"iPad6,11"]) return @"iPad 5 (WiFi)";
+    if ([platform isEqualToString:@"iPad6,12"]) return @"iPad 5 (Cellular)";
+    if ([platform isEqualToString:@"iPad7,1"])  return @"iPad Pro 12.9 inch 2nd gen (WiFi)";
+    if ([platform isEqualToString:@"iPad7,2"])  return @"iPad Pro 12.9 inch 2nd gen (Cellular)";
+    if ([platform isEqualToString:@"iPad7,3"])  return @"iPad Pro 10.5 inch (WiFi)";
+    if ([platform isEqualToString:@"iPad7,4"])  return @"iPad Pro 10.5 inch (Cellular)";
+    
+    if ([platform isEqualToString:@"AppleTV2,1"])    return @"Apple TV 2";
+    if ([platform isEqualToString:@"AppleTV3,1"])    return @"Apple TV 3";
+    if ([platform isEqualToString:@"AppleTV3,2"])    return @"Apple TV 3";
+    if ([platform isEqualToString:@"AppleTV5,3"])    return @"Apple TV 4";
+    
+    if ([platform isEqualToString:@"i386"])     return @"iPhone Simulator";
+    if ([platform isEqualToString:@"x86_64"])   return @"iPhone Simulator";
+    // 如果全部匹配不上，则返回原始类型
     return platform;
 }
 
