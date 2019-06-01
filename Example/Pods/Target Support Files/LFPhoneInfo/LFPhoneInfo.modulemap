@@ -1,0 +1,6 @@
+framework module LFPhoneInfo {
+  umbrella header "LFPhoneInfo-umbrella.h"
+
+  export *
+  module * { export * }
+}
