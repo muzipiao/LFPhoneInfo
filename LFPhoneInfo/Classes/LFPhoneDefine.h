@@ -12,15 +12,15 @@
 #define IOS_CELLULAR    @"pdp_ip0" // 蜂窝移动网络
 #define IOS_WIFI        @"en0"     // WiFi
 #define IOS_VPN         @"utun0"   // VPN
-#define IP_ADDR_IPv4    @"ipv4"
-#define IP_ADDR_IPv6    @"ipv6"
+#define IP_ADDR_IPv4    @"ipv4"    // ipv4
+#define IP_ADDR_IPv6    @"ipv6"    // ipv6
 
 // 设备类型
 typedef NS_ENUM(NSInteger, LFDeviceType) {
     /**
      * 未知类型
      */
-    LFDeviceTypeNone,
+    LFDeviceTypeUnkown,
     /**
      * iPhone
      */

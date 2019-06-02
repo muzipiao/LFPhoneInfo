@@ -255,9 +255,9 @@
     return networktype;
 }
 
-// 当前设备网络 ip 地址，只读取IPV4地址
-+ (void)setDeviceIp:(NSString *)deviceIp{}
-+ (NSString *)deviceIp{
+// 当前设备局域网 ip 地址，只读取IPV4地址
++ (void)setDeviceLANIp:(NSString *)deviceLANIp{}
++ (NSString *)deviceLANIp{
     NSDictionary *addressDict = [self getIPAddressDict];
     if ([[self deviceNetType] isEqualToString:@"Wi-Fi"]) {
         NSString *wfKey = [NSString stringWithFormat:@"%@/%@",IOS_WIFI,IP_ADDR_IPv4];

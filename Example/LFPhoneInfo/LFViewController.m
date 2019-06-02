@@ -51,19 +51,23 @@
     // 判断当前设备是不是模拟器，YES 是 模拟器，NO不是
     self.labelArray[8].text = [NSString stringWithFormat:@"是否是模拟器：%@",LFPhoneInfo.deviceIsSimulator?@"是":@"否"];
     // 当前设备电池电量百分比，取值范围 0 至 1.0，如果返回 -1.0 表示无法识别电池
-    self.labelArray[9].text = [NSString stringWithFormat:@"当前电量：%d %%",(int)(LFPhoneInfo.deviceBatteryLevel * 100)];
+    if (LFPhoneInfo.deviceBatteryLevel == -1) {
+        self.labelArray[9].text = @"当前电量：无法识别电池🔋";
+    }else{
+        self.labelArray[9].text = [NSString stringWithFormat:@"当前电量：%d %%",(int)(LFPhoneInfo.deviceBatteryLevel * 100)];
+    }
     // 屏幕逻辑尺寸 e.g. 逻辑像素尺寸为 2208x1242（屏幕实际物理像素尺寸是 1920x1080）
     self.labelArray[10].text = [NSString stringWithFormat:@"屏幕逻辑尺寸：%@",NSStringFromCGSize(LFPhoneInfo.deviceLogicalScreenSize)];
     // 当前设备总内存, 返回值为兆 MB, e.g. iPhone 总内存为 2048 MB
-    self.labelArray[11].text = [NSString stringWithFormat:@"设备总内存：%f MB",LFPhoneInfo.deviceTotalMemory];
+    self.labelArray[11].text = [NSString stringWithFormat:@"设备总内存：%.1f MB",LFPhoneInfo.deviceTotalMemory];
     // 当前 App 占用的设备内存，返回值为兆 MB, e.g. 占用 43 MB
-    self.labelArray[12].text = [NSString stringWithFormat:@"App占用内存：%f MB",LFPhoneInfo.appTakeUpMemory];
+    self.labelArray[12].text = [NSString stringWithFormat:@"App占用内存：%.1f MB",LFPhoneInfo.appTakeUpMemory];
     // 当前磁盘总空间，返回值为兆 MB，0为异常 e.g. 总共 16 GB 即 16384 MB
-    self.labelArray[13].text = [NSString stringWithFormat:@"设备总存储：%f MB",LFPhoneInfo.deviceTotalDisk];
+    self.labelArray[13].text = [NSString stringWithFormat:@"设备总存储：%.1f MB",LFPhoneInfo.deviceTotalDisk];
     // 当前磁盘未使用，返回值为兆 MB，0为异常 e.g. 空闲 2200 MB
-    self.labelArray[14].text = [NSString stringWithFormat:@"设备剩余存储：%f MB",LFPhoneInfo.deviceFreeDisk];
+    self.labelArray[14].text = [NSString stringWithFormat:@"设备剩余存储：%.1f MB",LFPhoneInfo.deviceFreeDisk];
     // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
-    self.labelArray[15].text = [NSString stringWithFormat:@"设备已用存储：%f MB",LFPhoneInfo.deviceUsedDisk];
+    self.labelArray[15].text = [NSString stringWithFormat:@"设备已用存储：%.1f MB",LFPhoneInfo.deviceUsedDisk];
     
     // 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
     self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商(通过系统获取)：%@",LFPhoneInfo.deviceCarrierNameBySys];
@@ -73,8 +77,8 @@
     self.labelArray[18].text = [NSString stringWithFormat:@"CPU 个数：%ld",(long)LFPhoneInfo.deviceCPUNum];
     // 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
     self.labelArray[19].text = [NSString stringWithFormat:@"网络状态：%@",LFPhoneInfo.deviceNetType];
-    // 当前设备网络 ip 地址
-    self.labelArray[20].text = [NSString stringWithFormat:@"IP 地址：%@",LFPhoneInfo.deviceIp];
+    // 当前设备局域网 ip 地址
+    self.labelArray[20].text = [NSString stringWithFormat:@"局域网 IP 地址：%@",LFPhoneInfo.deviceLANIp];
     // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
     self.labelArray[21].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
     // 当前设备是否越狱,模拟器会认为已经越狱

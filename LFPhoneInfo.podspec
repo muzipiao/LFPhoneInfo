@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-iOS 获取设备信息、获取网络信息、获取系统信息。
+iOS 获取设备信息、网络信息、系统信息。
                        DESC
 
   s.homepage         = 'https://github.com/muzipiao/LFPhoneInfo'

@@ -59,8 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, class) LFCPUType deviceCPUType;
 // 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
 @property (nonatomic, copy, class) NSString *deviceNetType;
-// 当前设备网络 ip 地址
-@property (nonatomic, copy, class) NSString *deviceIp;
+// 当前设备局域网 ip 地址
+@property (nonatomic, copy, class) NSString *deviceLANIp;
 // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
 @property (nonatomic, copy, class) NSString *appUpdateDate;
 // 当前设备是否越狱, YES 是已经越狱，NO 为未越狱

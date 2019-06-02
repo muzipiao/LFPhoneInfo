@@ -97,7 +97,7 @@
         }else if (isPad){
             return LFDeviceTypeIPadSimulator;
         }else{
-            return LFDeviceTypeNone;
+            return LFDeviceTypeUnkown;
         }
     }
     // 如果是真机
@@ -214,6 +214,7 @@
  @return 0.53 表示剩余电量 53%
  */
 + (CGFloat)getDeviceBatteryLevel{
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
     return [[UIDevice currentDevice] batteryLevel];
 }
 
