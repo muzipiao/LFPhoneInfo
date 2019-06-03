@@ -1,6 +1,7 @@
 ## iOS获取设备信息
 
 [![CI Status](https://img.shields.io/travis/muzipiao/LFPhoneInfo.svg?style=flat)](https://travis-ci.org/muzipiao/LFPhoneInfo)
+[![codecov](https://codecov.io/gh/muzipiao/LFPhoneInfo/branch/master/graph/badge.svg)](https://codecov.io/gh/muzipiao/LFPhoneInfo)
 [![Version](https://img.shields.io/cocoapods/v/LFPhoneInfo.svg?style=flat)](https://cocoapods.org/pods/LFPhoneInfo)
 [![License](https://img.shields.io/cocoapods/l/LFPhoneInfo.svg?style=flat)](https://cocoapods.org/pods/LFPhoneInfo)
 [![Platform](https://img.shields.io/cocoapods/p/LFPhoneInfo.svg?style=flat)](https://cocoapods.org/pods/LFPhoneInfo)
@@ -31,6 +32,8 @@
 |GPS|卫星定位|不准确|获取经纬度反地理编码|地下室等 GPS 信号弱有较大误差|
 |设备序列号|设备唯一标识|不准确|iOS 的 UUID|删除重装会变，重置位置和隐私会变|
 |APP 更新时间|软件更新时间或首次安装时间|支持|2019-06-01 12:32:38|可读取info.plist创建时间|
+|检测代理|设备使用代理 IP|支持|YES/NO|可准确检测设备是否设置了代理|
+|电池电量|当前设备电池电量百分比|支持|0.53 表示剩余电量 53%|取值范围 0 至 1.0，-1.0 表示无法识别电池|
 
 `LFPhoneInfo ` 可快速获取设备信息。
 
