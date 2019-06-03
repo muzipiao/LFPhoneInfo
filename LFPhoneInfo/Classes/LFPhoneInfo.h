@@ -48,10 +48,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, class) CGFloat deviceFreeDisk;
 // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
 @property (nonatomic, assign, class) CGFloat deviceUsedDisk;
-
-// 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
+/**
+ * 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为 nil，也可能为其他值
+ * e.g. @"中国移动" @"中国联通" @"中国电信" nil
+ */
 @property (nonatomic, copy, class) NSString *deviceCarrierNameBySys;
-// 通过状态栏视图获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier"
+/**
+ * 通过状态栏视图获取设备运营商，依赖于状态栏显示
+ * e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier" @"无 SIM 卡"
+ */
 @property (nonatomic, copy, class) NSString *deviceCarrierNameByView;
 // 当前设备的 CPU 数量
 @property (nonatomic, assign, class) NSInteger deviceCPUNum;
@@ -62,9 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 当前设备局域网 ip 地址
 @property (nonatomic, copy, class) NSString *deviceLANIp;
 // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
-@property (nonatomic, copy, class) NSString *appUpdateDate;
+@property (nonatomic, strong, class) NSDate *appUpdateDate;
 // 当前设备是否越狱, YES 是已经越狱，NO 为未越狱
 @property (nonatomic, assign, class) BOOL deviceIsJailbreak;
+// 当前设备是否使用网络代理, YES 是使用，NO 为未使用
+@property (nonatomic, assign, class) BOOL deviceIsUseProxy;
 
 @end
 

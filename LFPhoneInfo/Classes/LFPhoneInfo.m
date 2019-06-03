@@ -152,7 +152,10 @@
     return usedDisk;
 }
 
-// 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
+/**
+ * 通过系统框架获取设备运营商，返回值可能不准确
+ * e.g. @"中国移动" @"中国联通" @"中国电信" nil
+ */
 + (void)setDeviceCarrierNameBySys:(NSString *)deviceCarrierNameBySys{}
 + (NSString *)deviceCarrierNameBySys{
     CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
@@ -161,7 +164,10 @@
     return carrierName;
 }
 
-// 通过状态栏视图获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信" @"运营商" @"Carrier"
+/**
+ * 通过状态栏视图获取设备运营商，依赖于状态栏显示
+ * e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier" @"无 SIM 卡"
+ */
 + (void)setDeviceCarrierNameByView:(NSString *)deviceCarrierNameByView{}
 + (NSString *)deviceCarrierNameByView{
     NSArray *infoArray = [[[[UIApplication sharedApplication] valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
@@ -318,13 +324,13 @@
 }
 
 // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
-+ (void)setAppUpdateDate:(NSString *)appUpdateDate{}
-+ (NSString *)appUpdateDate{
++ (void)setAppUpdateDate:(NSDate *)appUpdateDate{}
++ (NSDate *)appUpdateDate{
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSDictionary *fileAttributes = [fileManager attributesOfItemAtPath:bundlePath error:nil];
-    NSString *date = [fileAttributes objectForKey:NSFileCreationDate];
-    return date?date:@"";
+    NSDate *date = [fileAttributes objectForKey:NSFileCreationDate];
+    return date;
 }
 
 // 当前设备是否越狱, YES 是已经越狱，NO 为未越狱
@@ -354,6 +360,14 @@
     }
     
     return isjbroken;
+}
+
+// 当前设备是否使用网络代理, YES 是使用，NO 为未使用
++ (void)setDeviceIsUseProxy:(BOOL)deviceIsUseProxy{}
++ (BOOL)deviceIsUseProxy{
+    CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
+    NSDictionary *dictProxy = (__bridge  id)proxySettings;
+    return [[dictProxy objectForKey:@"HTTPEnable"] boolValue];
 }
 
 @end

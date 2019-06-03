@@ -83,6 +83,8 @@
     self.labelArray[21].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
     // 当前设备是否越狱,模拟器会认为已经越狱
     self.labelArray[22].text = [NSString stringWithFormat:@"是否越狱：%@",LFPhoneInfo.deviceIsJailbreak?@"是":@"否"];
+    // 当前设备是否使用网络代理, YES 是使用，NO 为未使用
+    self.labelArray[23].text = [NSString stringWithFormat:@"是否使用代理：%@",LFPhoneInfo.deviceIsUseProxy?@"是":@"否"];
 }
 
 //创建label
