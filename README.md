@@ -47,6 +47,8 @@ NSString *typeStr = LFPhoneInfo.deviceTypeString;
 CGFloat batteryLevel = LFPhoneInfo.deviceBatteryLevel;
 ```
 
+## 图示
+
 ![](https://raw.githubusercontent.com/muzipiao/GitHubImages/master/phone_info/phone_info1.PNG)
 ![](https://raw.githubusercontent.com/muzipiao/GitHubImages/master/phone_info/phone_info2.PNG)
 
@@ -95,6 +97,6 @@ BOOL isJailbreak = LFPhoneInfo.deviceIsJailbreak;
 
 ## 许可
 
-LFPhoneInfo 在 MIT 许可下可用。有关详细信息，请参阅LICENSE文件。
+LFPhoneInfo 在 MIT 许可下可用。有关详细信息，请参阅 LICENSE 文件。
 
-如果您觉得有所帮助，请在[GitHub LFPhoneInfoDemo](https://github.com/muzipiao/LFPhoneInfo)上赏个Star ⭐️，您的鼓励是我前进的动力
+如果您觉得有所帮助，请在 [GitHub LFPhoneInfoDemo](https://github.com/muzipiao/LFPhoneInfo) 上赏个 Star ⭐️，您的鼓励是我前进的动力
