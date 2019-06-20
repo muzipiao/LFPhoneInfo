@@ -76,21 +76,15 @@
      * 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为 nil，也可能为其他值
      * e.g. @"中国移动" @"中国联通" @"中国电信" nil
      */
-    BOOL carrierNameBySys = ![LFPhoneInfo.deviceCarrierNameBySys isEqualToString:@""];
+    BOOL carrierNameBySys = LFPhoneInfo.deviceCarrierName || !LFPhoneInfo.deviceCarrierName;
     XCTAssertTrue(carrierNameBySys, @"Obtain the carrier name through the system.");
-    /**
-     * 通过状态栏视图获取设备运营商，依赖于状态栏显示
-     * e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier" @"无 SIM 卡"
-     */
-    BOOL carrierNameByView = ![LFPhoneInfo.deviceCarrierNameByView isEqualToString:@""];
-    XCTAssertTrue(carrierNameByView, @"Get the carrier name through the status bar.");
     // 当前设备的 CPU 数量
     XCTAssertTrue(LFPhoneInfo.deviceCPUNum > 0, @"The number of CPUs of the device is not 0.");
     // 当前设备的 CPU 类型枚举LFCPUTypeX86_64
     BOOL cpuTypeIsEqual = (LFPhoneInfo.deviceCPUType == LFCPUTypeX86_64) || (LFPhoneInfo.deviceCPUType == LFCPUTypeX86) || (LFPhoneInfo.deviceCPUType == LFCPUTypeUnkown);
     XCTAssertTrue(cpuTypeIsEqual, @"The emulator CPU type should be of the X86 type.");
-    // 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
-    XCTAssertTrue([LFPhoneInfo.deviceNetType isEqualToString:@"Wi-Fi"], @"The emulator CPU type should be of the X86 type.");
+    // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
+    XCTAssertTrue([LFPhoneInfo.deviceNetType isEqualToString:@"Wi-Fi"], @"The simulator net should be Wi-Fi.");
     // 当前设备局域网 ip 地址
     XCTAssertTrue(LFPhoneInfo.deviceLANIp.length > 0, @"Device LAN IP address.");
     // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
@@ -98,7 +92,8 @@
     // 当前设备是否越狱, YES 是已经越狱，NO 为未越狱
     XCTAssertTrue(LFPhoneInfo.deviceIsJailbreak, @"The simulator detects jailbreak.");
     // 当前设备是否使用网络代理, YES 是使用，NO 为未使用
-    XCTAssertFalse(LFPhoneInfo.deviceIsUseProxy, @"The device uses a proxy network.");
+    BOOL isProxy = LFPhoneInfo.deviceIsUseProxy;
+    XCTAssert(isProxy==YES || isProxy==NO, @"The device may use a proxy network.");
 }
 
 @end

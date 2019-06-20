@@ -52,17 +52,12 @@ NS_ASSUME_NONNULL_BEGIN
  * 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为 nil，也可能为其他值
  * e.g. @"中国移动" @"中国联通" @"中国电信" nil
  */
-@property(class, nonatomic, copy, readonly) NSString *deviceCarrierNameBySys;
-/**
- * 通过状态栏视图获取设备运营商，依赖于状态栏显示
- * e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier" @"无 SIM 卡"
- */
-@property(class, nonatomic, copy, readonly) NSString *deviceCarrierNameByView;
+@property(class, nonatomic, copy, readonly) NSString *deviceCarrierName;
 // 当前设备的 CPU 数量
 @property(class, nonatomic, assign, readonly) NSInteger deviceCPUNum;
 // 当前设备的 CPU 类型枚举
 @property(class, nonatomic, assign, readonly) LFCPUType deviceCPUType;
-// 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
+// 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
 @property(class, nonatomic, copy, readonly) NSString *deviceNetType;
 // 当前设备局域网 ip 地址
 @property(class, nonatomic, copy, readonly) NSString *deviceLANIp;

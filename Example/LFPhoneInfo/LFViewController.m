@@ -43,7 +43,7 @@
     // 当前设备用户设置的名称，设置->通用->关于本机->名称 e.g. "My iPhone"
     self.labelArray[4].text = [NSString stringWithFormat:@"设备用户名：%@",LFPhoneInfo.deviceSettingName];
     // 判断当前设备是不是iPhone，YES 是 iPhone 设备，NO不是
-    self.labelArray[5].text = [NSString stringWithFormat:@"是否是iPhone：%@",LFPhoneInfo.deviceIsIPhone?@"是":@"否"];
+    self.labelArray[5].text = [NSString stringWithFormat:@"是否是iPhone真机：%@",LFPhoneInfo.deviceIsIPhone?@"是":@"否"];
     // 判断当前设备是不是iPad，YES 是 iPad 设备，NO不是
     self.labelArray[6].text = [NSString stringWithFormat:@"是否是iPad：%@",LFPhoneInfo.deviceIsIPad?@"是":@"否"];
     // 判断当前设备是不是iPod，YES 是 iPod 设备，NO不是
@@ -70,21 +70,19 @@
     self.labelArray[15].text = [NSString stringWithFormat:@"设备已用存储：%.1f MB",LFPhoneInfo.deviceUsedDisk];
     
     // 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
-    self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商(通过系统获取)：%@",LFPhoneInfo.deviceCarrierNameBySys];
-    // 通过状态栏视图获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier"
-    self.labelArray[17].text = [NSString stringWithFormat:@"网络运营商(通过状态栏获取)：%@",LFPhoneInfo.deviceCarrierNameByView];
+    self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商：%@",LFPhoneInfo.deviceCarrierName];
     // 当前设备的 CPU 数量
-    self.labelArray[18].text = [NSString stringWithFormat:@"CPU 个数：%ld",(long)LFPhoneInfo.deviceCPUNum];
-    // 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
-    self.labelArray[19].text = [NSString stringWithFormat:@"网络状态：%@",LFPhoneInfo.deviceNetType];
+    self.labelArray[17].text = [NSString stringWithFormat:@"CPU 个数：%ld",(long)LFPhoneInfo.deviceCPUNum];
+    // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
+    self.labelArray[18].text = [NSString stringWithFormat:@"网络状态：%@",LFPhoneInfo.deviceNetType];
     // 当前设备局域网 ip 地址
-    self.labelArray[20].text = [NSString stringWithFormat:@"局域网 IP 地址：%@",LFPhoneInfo.deviceLANIp];
+    self.labelArray[19].text = [NSString stringWithFormat:@"局域网 IP 地址：%@",LFPhoneInfo.deviceLANIp];
     // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
-    self.labelArray[21].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
+    self.labelArray[20].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
     // 当前设备是否越狱,模拟器会认为已经越狱
-    self.labelArray[22].text = [NSString stringWithFormat:@"是否越狱：%@",LFPhoneInfo.deviceIsJailbreak?@"是":@"否"];
+    self.labelArray[21].text = [NSString stringWithFormat:@"是否越狱：%@",LFPhoneInfo.deviceIsJailbreak?@"是":@"否"];
     // 当前设备是否使用网络代理, YES 是使用，NO 为未使用
-    self.labelArray[23].text = [NSString stringWithFormat:@"是否使用代理：%@",LFPhoneInfo.deviceIsUseProxy?@"是":@"否"];
+    self.labelArray[22].text = [NSString stringWithFormat:@"是否使用代理：%@",LFPhoneInfo.deviceIsUseProxy?@"是":@"否"];
 }
 
 //创建label

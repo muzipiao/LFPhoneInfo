@@ -12,6 +12,7 @@
 
 #import "LFPhoneDefine.h"
 #import "LFPhoneInfo.h"
+#import "LFReachability.h"
 #import "UIDevice+LFDeviceInfo.h"
 
 FOUNDATION_EXPORT double LFPhoneInfoVersionNumber;

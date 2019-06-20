@@ -14,6 +14,7 @@
 #import <ifaddrs.h> // 获取ip
 #import <arpa/inet.h> // 获取ip
 #import <net/if.h> // 获取ip
+#import "LFReachability.h" // 网络状态获取
 
 @implementation LFPhoneInfo
 
@@ -156,30 +157,12 @@
  * 通过系统框架获取设备运营商，返回值可能不准确
  * e.g. @"中国移动" @"中国联通" @"中国电信" nil
  */
-+ (void)setDeviceCarrierNameBySys:(NSString *)deviceCarrierNameBySys{}
-+ (NSString *)deviceCarrierNameBySys{
++ (void)setDeviceCarrierName:(NSString *)deviceCarrierName{}
++ (NSString *)deviceCarrierName{
     CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
-    NSString *carrierName=[carrier carrierName];
+    NSString *carrierName = [carrier carrierName];
     return carrierName;
-}
-
-/**
- * 通过状态栏视图获取设备运营商，依赖于状态栏显示
- * e.g. @"中国移动" @"中国联通" @"中国电信" @"Carrier" @"无 SIM 卡"
- */
-+ (void)setDeviceCarrierNameByView:(NSString *)deviceCarrierNameByView{}
-+ (NSString *)deviceCarrierNameByView{
-    NSArray *infoArray = [[[[UIApplication sharedApplication] valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
-    for (id info in infoArray)
-    {
-        if ([info isKindOfClass:NSClassFromString(@"UIStatusBarServiceItemView")])
-        {
-            NSString *serviceString = [info valueForKeyPath:@"serviceString"];
-            return serviceString; // 遍历状态栏视图找到运营商
-        }
-    }
-    return @"";
 }
 
 // 当前设备的 CPU 数量
@@ -224,39 +207,57 @@
     }
 }
 
-// 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
+// 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
 + (void)setDeviceNetType:(NSString *)deviceNetType{}
 + (NSString *)deviceNetType{
     NSString *networktype = @"";
-    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
-    NSNumber *dataNetworkItemView = nil;
-    for (id subview in subviews) {
-        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
-            dataNetworkItemView = subview;
-            break;
-        }
-    }
-    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"] integerValue]) {
-        case 0:
+    LFReachability *reach = [LFReachability reachabilityForInternetConnection];
+    NetworkStatus status = [reach currentReachabilityStatus];
+    switch (status) {
+        case NotReachable:
             networktype = @"无服务";
             break;
-        case 1:
-            networktype = @"2G";
-            break;
-        case 2:
-            networktype = @"3G";
-            break;
-        case 3:
-            networktype = @"4G";
-            break;
-        case 4:
-            networktype = @"LTE";
-            break;
-        case 5:
+        case ReachableViaWiFi:
             networktype = @"Wi-Fi";
+            break;
+        case ReachableViaWWAN:
+            networktype = @"WWAN";
             break;
         default:
             break;
+    }
+    if (status != ReachableViaWWAN) {
+        return networktype;
+    }
+    // 如果是移动网络，判断具体
+    NSString *wwanNetType = nil;
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    NSString *currentStatus = info.currentRadioAccessTechnology;
+    if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyGPRS"]) {
+        wwanNetType = @"GPRS";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyEdge"]) {
+        wwanNetType = @"2.75G EDGE";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyWCDMA"]){
+        wwanNetType = @"3G";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSDPA"]){
+        wwanNetType = @"3.5G HSDPA";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSUPA"]){
+        wwanNetType = @"3.5G HSUPA";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMA1x"]){
+        wwanNetType = @"2G";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORev0"]){
+        wwanNetType = @"3G";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevA"]){
+        wwanNetType = @"3G";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevB"]){
+        wwanNetType = @"3G";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyeHRPD"]){
+        wwanNetType = @"HRPD";
+    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyLTE"]){
+        wwanNetType = @"4G";
+    }
+    if (wwanNetType) {
+        networktype = wwanNetType;
     }
     return networktype;
 }

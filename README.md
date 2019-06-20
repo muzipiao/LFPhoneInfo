@@ -82,9 +82,9 @@ pod 'LFPhoneInfo'
 #import "LFPhoneInfo.h"
 
 // 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
-NSString *carrierName = LFPhoneInfo.deviceCarrierNameBySys;
+NSString *carrierName = LFPhoneInfo.deviceCarrierName;
 
-// 当前设备网络状态 e.g. @"Wi-Fi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
+// 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
 NSString *netType = LFPhoneInfo.deviceNetType;
 
 // 当前设备局域网 ip 地址
@@ -95,8 +95,6 @@ BOOL isJailbreak = LFPhoneInfo.deviceIsJailbreak;
 
 ```
 
-## 许可
-
-LFPhoneInfo 在 MIT 许可下可用。有关详细信息，请参阅 LICENSE 文件。
+## 其他
 
 如果您觉得有所帮助，请在 [GitHub LFPhoneInfoDemo](https://github.com/muzipiao/LFPhoneInfo) 上赏个 Star ⭐️，您的鼓励是我前进的动力

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LFPhoneInfo'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'iOS 快速获取设备信息。'
   s.description      = <<-DESC
                         LFPhoneInfo 可通过一行代码快速获取设备各种信息的工具类。
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/muzipiao/LFPhoneInfo.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'LFPhoneInfo/Classes/**/*'
-  s.frameworks = 'UIKit', 'Foundation'
+  s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration'
   s.requires_arc = true
 end
