@@ -37,7 +37,9 @@
     BOOL typeSimulator = [LFPhoneInfo.deviceTypeString isEqualToString:@"iPhone Simulator"];
     XCTAssertTrue(typeIPhone8 || typeSimulator, @"The device type should be iPhone 8 or Simulator.");
     // 设备系统版本号 e.g. @"12.0.1"
-    XCTAssertTrue([LFPhoneInfo.deviceSystemVersion hasPrefix:@"12"], @"The device system should be iOS 12.");
+    NSArray *systemVersion = [LFPhoneInfo.deviceSystemVersion componentsSeparatedByString:@"."];
+    int systemVersionValue = [systemVersion[0] intValue];
+    XCTAssertTrue(systemVersionValue >= 12, @"The device system should be iOS 12.");
     // 设备系统名称 e.g. @"iOS"
     XCTAssertTrue([LFPhoneInfo.deviceSystemName isEqualToString:@"iOS"], @"The device system name should be iOS.");
     // 设备类型名称 e.g. @"iPhone", @"iPod touch", @"iPad"

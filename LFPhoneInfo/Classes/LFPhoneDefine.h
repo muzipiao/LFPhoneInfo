@@ -17,54 +17,21 @@
 
 // 设备类型
 typedef NS_ENUM(NSInteger, LFDeviceType) {
-    /**
-     * 未知类型
-     */
-    LFDeviceTypeUnkown,
-    /**
-     * iPhone
-     */
-    LFDeviceTypeIPhone,
-    /**
-     * iPad
-     */
-    LFDeviceTypeIPad,
-    /**
-     * iPod
-     */
-    LFDeviceTypeIPod,
-    /**
-     * 手机模拟器
-     */
-    LFDeviceTypeIPhoneSimulator,
-    /**
-     * iPad模拟器
-     */
-    LFDeviceTypeIPadSimulator
+    LFDeviceTypeUnkown,         //未知类型
+    LFDeviceTypeIPhone,         //iPhone
+    LFDeviceTypeIPad,           //iPad
+    LFDeviceTypeIPod,           //iPod
+    LFDeviceTypeIPhoneSimulator,//手机模拟器
+    LFDeviceTypeIPadSimulator   //iPad模拟器
 };
 
 // 设备 CPU 类型
 typedef NS_ENUM(NSInteger, LFCPUType) {
-    /**
-     * 未知类型
-     */
-    LFCPUTypeUnkown,
-    /**
-     * 32位手机 CPU
-     */
-    LFCPUTypeARM,
-    /**
-     * 64位手机 CPU
-     */
-    LFCPUTypeARM64,
-    /**
-     * 32位电脑 CPU
-     */
-    LFCPUTypeX86,
-    /**
-     * 64位电脑 CPU
-     */
-    LFCPUTypeX86_64,
+    LFCPUTypeUnkown,    //未知类型
+    LFCPUTypeARM,       //32位手机 CPU
+    LFCPUTypeARM64,     //64位手机 CPU
+    LFCPUTypeX86,       //32位电脑 CPU
+    LFCPUTypeX86_64     //64位电脑 CPU
 };
 
 

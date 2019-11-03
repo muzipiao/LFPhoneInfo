@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		9C5EFC462365AFB900EDFD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */; };
 		A6FE947FCFF14E48740C65F4 /* Pods_LFPhoneInfo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389CB767A668E6A71CF6F928 /* Pods_LFPhoneInfo_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE685200734EA1AAC3E5793 /* LFPhoneInfo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LFPhoneInfo.podspec; path = ../LFPhoneInfo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE7F2D8005F2BF942DD612C0 /* Pods-LFPhoneInfo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Example.release.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAF08C3E8286B37A82D973F6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				6003F59D195388D20070C39A /* LFAppDelegate.m */,
 				6003F5A5195388D20070C39A /* LFViewController.h */,
 				6003F5A6195388D20070C39A /* LFViewController.m */,
+				9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -242,11 +245,11 @@
 				ORGANIZATIONNAME = "李飞";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 5876MU3PLA;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 4BX77JHQHH;
+						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
-						DevelopmentTeam = 5876MU3PLA;
+						DevelopmentTeam = 4BX77JHQHH;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -275,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5EFC462365AFB900EDFD7F /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -510,17 +514,18 @@
 			baseConfigurationReference = EC98DE137EBB9EF352EC4E7B /* Pods-LFPhoneInfo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5876MU3PLA;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LFPhoneInfo/LFPhoneInfo-Prefix.pch";
 				INFOPLIST_FILE = "LFPhoneInfo/LFPhoneInfo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jdr.LFPhoneInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lf.LFPhoneInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = CEBTest_jdr_dev_181121;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,17 +536,18 @@
 			baseConfigurationReference = DE7F2D8005F2BF942DD612C0 /* Pods-LFPhoneInfo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5876MU3PLA;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LFPhoneInfo/LFPhoneInfo-Prefix.pch";
 				INFOPLIST_FILE = "LFPhoneInfo/LFPhoneInfo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jdr.LFPhoneInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lf.LFPhoneInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = CEBTest_jdr_dev_181121;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -552,7 +558,7 @@
 			baseConfigurationReference = 352704E9A0C4396C22A01B88 /* Pods-LFPhoneInfo_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5876MU3PLA;
+				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -576,7 +582,7 @@
 			baseConfigurationReference = 3999FADC5ECD28BD4C0CD523 /* Pods-LFPhoneInfo_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5876MU3PLA;
+				DEVELOPMENT_TEAM = 4BX77JHQHH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
