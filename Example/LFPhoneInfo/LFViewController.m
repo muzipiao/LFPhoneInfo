@@ -51,11 +51,11 @@
     // 判断当前设备是不是模拟器，YES 是 模拟器，NO不是
     self.labelArray[8].text = [NSString stringWithFormat:@"是否是模拟器：%@",LFPhoneInfo.deviceIsSimulator?@"是":@"否"];
     // 当前设备电池电量百分比，取值范围 0 至 1.0，如果返回 -1.0 表示无法识别电池
+    NSString *batteryLevel = [NSString stringWithFormat:@"当前电量：%d %%",(int)(LFPhoneInfo.deviceBatteryLevel * 100)];
     if (LFPhoneInfo.deviceBatteryLevel == -1) {
-        self.labelArray[9].text = @"当前电量：无法识别电池🔋";
-    }else{
-        self.labelArray[9].text = [NSString stringWithFormat:@"当前电量：%d %%",(int)(LFPhoneInfo.deviceBatteryLevel * 100)];
+        batteryLevel = @"当前电量：无法识别电池🔋";
     }
+    self.labelArray[9].text = batteryLevel;
     // 屏幕逻辑尺寸 e.g. 逻辑像素尺寸为 2208x1242（屏幕实际物理像素尺寸是 1920x1080）
     self.labelArray[10].text = [NSString stringWithFormat:@"屏幕逻辑尺寸：%@",NSStringFromCGSize(LFPhoneInfo.deviceLogicalScreenSize)];
     // 当前设备总内存, 返回值为兆 MB, e.g. iPhone 总内存为 2048 MB

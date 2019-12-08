@@ -368,7 +368,9 @@
 + (BOOL)deviceIsUseProxy{
     CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
     NSDictionary *dictProxy = (__bridge  id)proxySettings;
-    return [[dictProxy objectForKey:@"HTTPEnable"] boolValue];
+    BOOL isUseProxy = [[dictProxy objectForKey:@"HTTPEnable"] boolValue];
+    CFRelease(proxySettings);
+    return isUseProxy;
 }
 
 @end
