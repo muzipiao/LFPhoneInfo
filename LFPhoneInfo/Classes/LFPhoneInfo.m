@@ -212,21 +212,21 @@
 + (NSString *)deviceNetType{
     NSString *networktype = @"";
     LFReachability *reach = [LFReachability reachabilityForInternetConnection];
-    NetworkStatus status = [reach currentReachabilityStatus];
+    LFNetworkStatus status = [reach currentReachabilityStatus];
     switch (status) {
-        case NotReachable:
+        case LFNotReachable:
             networktype = @"无服务";
             break;
-        case ReachableViaWiFi:
+        case LFReachableViaWiFi:
             networktype = @"Wi-Fi";
             break;
-        case ReachableViaWWAN:
+        case LFReachableViaWWAN:
             networktype = @"WWAN";
             break;
         default:
             break;
     }
-    if (status != ReachableViaWWAN) {
+    if (status != LFReachableViaWWAN) {
         return networktype;
     }
     // 如果是移动网络，判断具体
