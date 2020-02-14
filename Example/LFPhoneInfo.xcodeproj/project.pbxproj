@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40EA1319BF34859E25D36E3C /* Pods_LFPhoneInfo_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A83B64A7F03EEDBB422BFA /* Pods_LFPhoneInfo_Example.framework */; };
+		5F896021E7F28B17016C4549 /* libPods-LFPhoneInfo_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2494C4FF24EB5876B85CDAB1 /* libPods-LFPhoneInfo_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +21,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14C88A3F056C4F4E636EF4A /* libPods-LFPhoneInfo_Example.a */; };
 		9C5EFC462365AFB900EDFD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */; };
-		A6FE947FCFF14E48740C65F4 /* Pods_LFPhoneInfo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389CB767A668E6A71CF6F928 /* Pods_LFPhoneInfo_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2494C4FF24EB5876B85CDAB1 /* libPods-LFPhoneInfo_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFPhoneInfo_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352704E9A0C4396C22A01B88 /* Pods-LFPhoneInfo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Tests/Pods-LFPhoneInfo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		389CB767A668E6A71CF6F928 /* Pods_LFPhoneInfo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFPhoneInfo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3999FADC5ECD28BD4C0CD523 /* Pods-LFPhoneInfo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Tests.release.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Tests/Pods-LFPhoneInfo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LFPhoneInfo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFPhoneInfo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 		DE7F2D8005F2BF942DD612C0 /* Pods-LFPhoneInfo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Example.release.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAF08C3E8286B37A82D973F6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EC98DE137EBB9EF352EC4E7B /* Pods-LFPhoneInfo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Example.debug.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F4A83B64A7F03EEDBB422BFA /* Pods_LFPhoneInfo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFPhoneInfo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14C88A3F056C4F4E636EF4A /* libPods-LFPhoneInfo_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFPhoneInfo_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7ABC956A8116C4D8C002EFB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				40EA1319BF34859E25D36E3C /* Pods_LFPhoneInfo_Example.framework in Frameworks */,
+				80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				A6FE947FCFF14E48740C65F4 /* Pods_LFPhoneInfo_Tests.framework in Frameworks */,
+				5F896021E7F28B17016C4549 /* libPods-LFPhoneInfo_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F4A83B64A7F03EEDBB422BFA /* Pods_LFPhoneInfo_Example.framework */,
-				389CB767A668E6A71CF6F928 /* Pods_LFPhoneInfo_Tests.framework */,
+				F14C88A3F056C4F4E636EF4A /* libPods-LFPhoneInfo_Example.a */,
+				2494C4FF24EB5876B85CDAB1 /* libPods-LFPhoneInfo_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,7 +204,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				62A9CF729FC1EE861556637E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,24 +314,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62A9CF729FC1EE861556637E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LFPhoneInfo/LFPhoneInfo.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LFPhoneInfo.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DCF4E534A9E770BBEEBB86C9 /* [CP] Check Pods Manifest.lock */ = {
