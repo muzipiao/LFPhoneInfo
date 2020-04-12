@@ -23,6 +23,15 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14C88A3F056C4F4E636EF4A /* libPods-LFPhoneInfo_Example.a */; };
 		9C5EFC462365AFB900EDFD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */; };
+		9C94CDEC24434C3800024B2C /* LFPhoneCarthage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */; };
+		9C94CDED24434C3800024B2C /* LFPhoneCarthage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C94CDF924434D2C00024B2C /* UIDevice+LFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94CDF224434D2C00024B2C /* UIDevice+LFDeviceInfo.m */; };
+		9C94CDFA24434D2C00024B2C /* UIDevice+LFDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF324434D2C00024B2C /* UIDevice+LFDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C94CDFB24434D2C00024B2C /* LFPhoneDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF424434D2C00024B2C /* LFPhoneDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C94CDFC24434D2C00024B2C /* LFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF524434D2C00024B2C /* LFReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C94CDFD24434D2C00024B2C /* LFPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94CDF624434D2C00024B2C /* LFPhoneInfo.m */; };
+		9C94CDFE24434D2C00024B2C /* LFPhoneInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF724434D2C00024B2C /* LFPhoneInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C94CDFF24434D2C00024B2C /* LFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94CDF824434D2C00024B2C /* LFReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +42,28 @@
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = LFPhoneInfo;
 		};
+		9C94CDEA24434C3800024B2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C94CDE424434C3800024B2C;
+			remoteInfo = LFPhoneCarthage;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C94CDF124434C3800024B2C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9C94CDED24434C3800024B2C /* LFPhoneCarthage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2494C4FF24EB5876B85CDAB1 /* libPods-LFPhoneInfo_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFPhoneInfo_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +89,15 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFPhoneCarthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C94CDE824434C3800024B2C /* LFPhoneCarthage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LFPhoneCarthage-Info.plist"; sourceTree = "<group>"; };
+		9C94CDF224434D2C00024B2C /* UIDevice+LFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+LFDeviceInfo.m"; path = "../../LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.m"; sourceTree = "<group>"; };
+		9C94CDF324434D2C00024B2C /* UIDevice+LFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+LFDeviceInfo.h"; path = "../../LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.h"; sourceTree = "<group>"; };
+		9C94CDF424434D2C00024B2C /* LFPhoneDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFPhoneDefine.h; path = ../../LFPhoneInfo/Classes/LFPhoneDefine.h; sourceTree = "<group>"; };
+		9C94CDF524434D2C00024B2C /* LFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFReachability.h; path = ../../LFPhoneInfo/Classes/LFReachability.h; sourceTree = "<group>"; };
+		9C94CDF624434D2C00024B2C /* LFPhoneInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFPhoneInfo.m; path = ../../LFPhoneInfo/Classes/LFPhoneInfo.m; sourceTree = "<group>"; };
+		9C94CDF724434D2C00024B2C /* LFPhoneInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFPhoneInfo.h; path = ../../LFPhoneInfo/Classes/LFPhoneInfo.h; sourceTree = "<group>"; };
+		9C94CDF824434D2C00024B2C /* LFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFReachability.m; path = ../../LFPhoneInfo/Classes/LFReachability.m; sourceTree = "<group>"; };
 		ACE685200734EA1AAC3E5793 /* LFPhoneInfo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LFPhoneInfo.podspec; path = ../LFPhoneInfo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE7F2D8005F2BF942DD612C0 /* Pods-LFPhoneInfo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfo_Example.release.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfo_Example/Pods-LFPhoneInfo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAF08C3E8286B37A82D973F6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -75,6 +114,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				9C94CDEC24434C3800024B2C /* LFPhoneCarthage.framework in Frameworks */,
 				80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +130,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C94CDE224434C3800024B2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +146,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for LFPhoneInfo */,
 				6003F5B5195388D20070C39A /* Tests */,
+				9C94CDE624434C3800024B2C /* LFPhoneCarthage */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				7D29811009D2AEAE7C984D5F /* Pods */,
@@ -110,6 +158,7 @@
 			children = (
 				6003F58A195388D20070C39A /* LFPhoneInfo_Example.app */,
 				6003F5AE195388D20070C39A /* LFPhoneInfo_Tests.xctest */,
+				9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +242,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9C94CDE624434C3800024B2C /* LFPhoneCarthage */ = {
+			isa = PBXGroup;
+			children = (
+				9C94CDF424434D2C00024B2C /* LFPhoneDefine.h */,
+				9C94CDF724434D2C00024B2C /* LFPhoneInfo.h */,
+				9C94CDF624434D2C00024B2C /* LFPhoneInfo.m */,
+				9C94CDF524434D2C00024B2C /* LFReachability.h */,
+				9C94CDF824434D2C00024B2C /* LFReachability.m */,
+				9C94CDF324434D2C00024B2C /* UIDevice+LFDeviceInfo.h */,
+				9C94CDF224434D2C00024B2C /* UIDevice+LFDeviceInfo.m */,
+				9C94CDE824434C3800024B2C /* LFPhoneCarthage-Info.plist */,
+			);
+			path = LFPhoneCarthage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9C94CDE024434C3800024B2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C94CDFE24434D2C00024B2C /* LFPhoneInfo.h in Headers */,
+				9C94CDFC24434D2C00024B2C /* LFReachability.h in Headers */,
+				9C94CDFB24434D2C00024B2C /* LFPhoneDefine.h in Headers */,
+				9C94CDFA24434D2C00024B2C /* UIDevice+LFDeviceInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6003F589195388D20070C39A /* LFPhoneInfo_Example */ = {
@@ -204,10 +282,12 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				9C94CDF124434C3800024B2C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C94CDEB24434C3800024B2C /* PBXTargetDependency */,
 			);
 			name = LFPhoneInfo_Example;
 			productName = LFPhoneInfo;
@@ -233,6 +313,24 @@
 			productReference = 6003F5AE195388D20070C39A /* LFPhoneInfo_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9C94CDE424434C3800024B2C /* LFPhoneCarthage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C94CDEE24434C3800024B2C /* Build configuration list for PBXNativeTarget "LFPhoneCarthage" */;
+			buildPhases = (
+				9C94CDE024434C3800024B2C /* Headers */,
+				9C94CDE124434C3800024B2C /* Sources */,
+				9C94CDE224434C3800024B2C /* Frameworks */,
+				9C94CDE324434C3800024B2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFPhoneCarthage;
+			productName = LFPhoneCarthage;
+			productReference = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,12 +342,15 @@
 				ORGANIZATIONNAME = "李飞";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 4BX77JHQHH;
 						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
 						DevelopmentTeam = 4BX77JHQHH;
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					9C94CDE424434C3800024B2C = {
+						CreatedOnToolsVersion = 11.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -268,6 +369,7 @@
 			targets = (
 				6003F589195388D20070C39A /* LFPhoneInfo_Example */,
 				6003F5AD195388D20070C39A /* LFPhoneInfo_Tests */,
+				9C94CDE424434C3800024B2C /* LFPhoneCarthage */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +390,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C94CDE324434C3800024B2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +468,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C94CDE124434C3800024B2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C94CDFD24434D2C00024B2C /* LFPhoneInfo.m in Sources */,
+				9C94CDF924434D2C00024B2C /* UIDevice+LFDeviceInfo.m in Sources */,
+				9C94CDFF24434D2C00024B2C /* LFReachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -366,6 +485,11 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* LFPhoneInfo_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		9C94CDEB24434C3800024B2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C94CDE424434C3800024B2C /* LFPhoneCarthage */;
+			targetProxy = 9C94CDEA24434C3800024B2C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,11 +622,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BX77JHQHH;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LFPhoneInfo/LFPhoneInfo-Prefix.pch";
 				INFOPLIST_FILE = "LFPhoneInfo/LFPhoneInfo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lf.LFPhoneInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,11 +645,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BX77JHQHH;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LFPhoneInfo/LFPhoneInfo-Prefix.pch";
 				INFOPLIST_FILE = "LFPhoneInfo/LFPhoneInfo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lf.LFPhoneInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,6 +704,77 @@
 			};
 			name = Release;
 		};
+		9C94CDEF24434C3800024B2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "LFPhoneCarthage/LFPhoneCarthage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmobjc.LFPhoneCarthage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C94CDF024434C3800024B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "LFPhoneCarthage/LFPhoneCarthage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmobjc.LFPhoneCarthage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -604,6 +801,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C94CDEE24434C3800024B2C /* Build configuration list for PBXNativeTarget "LFPhoneCarthage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C94CDEF24434C3800024B2C /* Debug */,
+				9C94CDF024434C3800024B2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
