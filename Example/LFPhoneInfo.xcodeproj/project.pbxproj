@@ -23,8 +23,8 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14C88A3F056C4F4E636EF4A /* libPods-LFPhoneInfo_Example.a */; };
 		9C5EFC462365AFB900EDFD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */; };
-		9C94CDEC24434C3800024B2C /* LFPhoneCarthage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */; };
-		9C94CDED24434C3800024B2C /* LFPhoneCarthage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C94CDEC24434C3800024B2C /* LFPhoneInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneInfo.framework */; };
+		9C94CDED24434C3800024B2C /* LFPhoneInfo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C94CDE524434C3800024B2C /* LFPhoneInfo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C94CDF924434D2C00024B2C /* UIDevice+LFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94CDF224434D2C00024B2C /* UIDevice+LFDeviceInfo.m */; };
 		9C94CDFA24434D2C00024B2C /* UIDevice+LFDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF324434D2C00024B2C /* UIDevice+LFDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C94CDFB24434D2C00024B2C /* LFPhoneDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C94CDF424434D2C00024B2C /* LFPhoneDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9C94CDED24434C3800024B2C /* LFPhoneCarthage.framework in Embed Frameworks */,
+				9C94CDED24434C3800024B2C /* LFPhoneInfo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +89,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		9C5EFC452365AFB900EDFD7F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFPhoneCarthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C94CDE524434C3800024B2C /* LFPhoneInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFPhoneInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C94CDE824434C3800024B2C /* LFPhoneCarthage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LFPhoneCarthage-Info.plist"; sourceTree = "<group>"; };
 		9C94CDF224434D2C00024B2C /* UIDevice+LFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+LFDeviceInfo.m"; path = "../../LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.m"; sourceTree = "<group>"; };
 		9C94CDF324434D2C00024B2C /* UIDevice+LFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+LFDeviceInfo.h"; path = "../../LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.h"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				9C94CDEC24434C3800024B2C /* LFPhoneCarthage.framework in Frameworks */,
+				9C94CDEC24434C3800024B2C /* LFPhoneInfo.framework in Frameworks */,
 				80B757B19388E218CA7E18B0 /* libPods-LFPhoneInfo_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +158,7 @@
 			children = (
 				6003F58A195388D20070C39A /* LFPhoneInfo_Example.app */,
 				6003F5AE195388D20070C39A /* LFPhoneInfo_Tests.xctest */,
-				9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */,
+				9C94CDE524434C3800024B2C /* LFPhoneInfo.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 			);
 			name = LFPhoneCarthage;
 			productName = LFPhoneCarthage;
-			productReference = 9C94CDE524434C3800024B2C /* LFPhoneCarthage.framework */;
+			productReference = 9C94CDE524434C3800024B2C /* LFPhoneInfo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -730,7 +730,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmobjc.LFPhoneCarthage;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = LFPhoneInfo;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e";
@@ -766,7 +766,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lf.gmobjc.LFPhoneCarthage;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = LFPhoneInfo;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e";
