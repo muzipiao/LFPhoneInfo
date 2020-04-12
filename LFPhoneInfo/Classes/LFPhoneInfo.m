@@ -14,7 +14,6 @@
 #import <ifaddrs.h> // 获取ip
 #import <arpa/inet.h> // 获取ip
 #import <net/if.h> // 获取ip
-#import "LFReachability.h" // 网络状态获取
 
 @implementation LFPhoneInfo
 

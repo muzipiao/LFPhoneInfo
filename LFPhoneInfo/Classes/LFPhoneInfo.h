@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LFPhoneDefine.h"
+#import "LFReachability.h"
 #import "UIDevice+LFDeviceInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
