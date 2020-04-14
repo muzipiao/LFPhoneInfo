@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D0DC3527DBDD5A1FB48F60E5230B6D1 /* UIDevice+LFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 874A802A279AC64259EB639C38C6C164 /* UIDevice+LFDeviceInfo.m */; };
+		0D0DC3527DBDD5A1FB48F60E5230B6D1 /* UIDevice+LFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F34BEFF0D92000681DCA5F801BF91B /* UIDevice+LFDeviceInfo.m */; };
 		1115588952AD5FA0E869A4422BA82932 /* Pods-LFPhoneInfo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B05B228BB887CABFA5FA0DFFD3E63A /* Pods-LFPhoneInfo_Example-dummy.m */; };
-		178A2EF543DC9FA2C312A29442363205 /* LFPhoneInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5232C35C4D5944E16079984C26FDB6 /* LFPhoneInfo-dummy.m */; };
-		925AEE50947BF06A404734EB5694F775 /* LFPhoneDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F465973F6BFD688681A0BB9FE8356C /* LFPhoneDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		97B95CCD74A27B6F7F063C311A5087E1 /* LFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F2804CA16FB4EF74784176F63807EBF5 /* LFReachability.m */; };
-		C0C99F45D0EEF97280D918BFCD624482 /* UIDevice+LFDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D37C7242C8DB37BFE401763FBF367386 /* UIDevice+LFDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C67F291BC63A6FF10EE1014B2776EBCD /* LFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0344DDF834ADA978BA3CC8B7AA973E7C /* LFReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D42918F83DA411CEF56CD64388E3108B /* LFPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 45352DE81404222086C80F245434F564 /* LFPhoneInfo.m */; };
+		178A2EF543DC9FA2C312A29442363205 /* LFPhoneInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78058E86C870CADF4D802F8C4E47C60C /* LFPhoneInfo-dummy.m */; };
+		925AEE50947BF06A404734EB5694F775 /* LFPhoneDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 678F10ADB19B391A793677D6D6C2B7A0 /* LFPhoneDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97B95CCD74A27B6F7F063C311A5087E1 /* LFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BC301560DEDD4DC76FF190EAB03876 /* LFReachability.m */; };
+		C0C99F45D0EEF97280D918BFCD624482 /* UIDevice+LFDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 996473E0D97B874E2B4F5600438A6E13 /* UIDevice+LFDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C67F291BC63A6FF10EE1014B2776EBCD /* LFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C28DEF65916594161B2E7F60FDAF1EAD /* LFReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D42918F83DA411CEF56CD64388E3108B /* LFPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F297E8EA715AB0F321E6F6477D9C1 /* LFPhoneInfo.m */; };
 		DCD1CF3F5B79626B09D11EA94382D315 /* Pods-LFPhoneInfo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD636DDC1BB99497B889E49348EF130 /* Pods-LFPhoneInfo_Tests-dummy.m */; };
-		FE37F4036F1D39BA3E16E7D8BAC25D91 /* LFPhoneInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = AA05328FA9AD442060DFFE5299C11C28 /* LFPhoneInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE37F4036F1D39BA3E16E7D8BAC25D91 /* LFPhoneInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6897DF322CFE96697009F7D928ABA248 /* LFPhoneInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,33 +37,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0344DDF834ADA978BA3CC8B7AA973E7C /* LFReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFReachability.h; path = LFPhoneInfo/Classes/LFReachability.h; sourceTree = "<group>"; };
-		0E5232C35C4D5944E16079984C26FDB6 /* LFPhoneInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFPhoneInfo-dummy.m"; sourceTree = "<group>"; };
-		1928890C3A073D7CD6AE2F6F7EBBDD60 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		20F200C2310223AC4B6EB1C7913E4A93 /* libPods-LFPhoneInfo_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LFPhoneInfo_Tests.a"; path = "libPods-LFPhoneInfo_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21BC301560DEDD4DC76FF190EAB03876 /* LFReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFReachability.m; path = LFPhoneInfo/Classes/LFReachability.m; sourceTree = "<group>"; };
 		2786386C84B472AA96E64509246D23CA /* Pods-LFPhoneInfo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LFPhoneInfo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2FAAC047C100C3E3CBCF2CD11FB14729 /* Pods-LFPhoneInfo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFPhoneInfo_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		45352DE81404222086C80F245434F564 /* LFPhoneInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFPhoneInfo.m; path = LFPhoneInfo/Classes/LFPhoneInfo.m; sourceTree = "<group>"; };
-		4A18B4D064CCBC34DEF8D6A83E554CC7 /* LFPhoneInfo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LFPhoneInfo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		32399F9588084409958F2C1E408F7FF7 /* LFPhoneInfo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFPhoneInfo-prefix.pch"; sourceTree = "<group>"; };
 		4B9BBE18F3B7085B3ED967C4AF402274 /* Pods-LFPhoneInfo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LFPhoneInfo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		51B05B228BB887CABFA5FA0DFFD3E63A /* Pods-LFPhoneInfo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LFPhoneInfo_Example-dummy.m"; sourceTree = "<group>"; };
-		616EFA7B236C98715ECCB0D9D1427B2A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		61F465973F6BFD688681A0BB9FE8356C /* LFPhoneDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFPhoneDefine.h; path = LFPhoneInfo/Classes/LFPhoneDefine.h; sourceTree = "<group>"; };
-		874A802A279AC64259EB639C38C6C164 /* UIDevice+LFDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+LFDeviceInfo.m"; path = "LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.m"; sourceTree = "<group>"; };
+		678F10ADB19B391A793677D6D6C2B7A0 /* LFPhoneDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFPhoneDefine.h; path = LFPhoneInfo/Classes/LFPhoneDefine.h; sourceTree = "<group>"; };
+		6897DF322CFE96697009F7D928ABA248 /* LFPhoneInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFPhoneInfo.h; path = LFPhoneInfo/Classes/LFPhoneInfo.h; sourceTree = "<group>"; };
+		78058E86C870CADF4D802F8C4E47C60C /* LFPhoneInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFPhoneInfo-dummy.m"; sourceTree = "<group>"; };
 		8BD636DDC1BB99497B889E49348EF130 /* Pods-LFPhoneInfo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LFPhoneInfo_Tests-dummy.m"; sourceTree = "<group>"; };
+		8F3B91B8B37224D6DD52F392152D07F0 /* LFPhoneInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFPhoneInfo.debug.xcconfig; sourceTree = "<group>"; };
+		996473E0D97B874E2B4F5600438A6E13 /* UIDevice+LFDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+LFDeviceInfo.h"; path = "LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0D8130FB21C4360ED7E6E11FC4831E0 /* LFPhoneInfo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFPhoneInfo.xcconfig; sourceTree = "<group>"; };
-		AA05328FA9AD442060DFFE5299C11C28 /* LFPhoneInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFPhoneInfo.h; path = LFPhoneInfo/Classes/LFPhoneInfo.h; sourceTree = "<group>"; };
+		A6F5C00DA50F6AB5B2FB3864BF0E4B34 /* LFPhoneInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFPhoneInfo.release.xcconfig; sourceTree = "<group>"; };
+		A9F34BEFF0D92000681DCA5F801BF91B /* UIDevice+LFDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+LFDeviceInfo.m"; path = "LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.m"; sourceTree = "<group>"; };
 		AE76FC1D257BA9ED758A4640F85800BA /* Pods-LFPhoneInfo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LFPhoneInfo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B32FE23D4B0B53E7B870C4A7D2D251BC /* LFPhoneInfo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFPhoneInfo-prefix.pch"; sourceTree = "<group>"; };
+		B16F297E8EA715AB0F321E6F6477D9C1 /* LFPhoneInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFPhoneInfo.m; path = LFPhoneInfo/Classes/LFPhoneInfo.m; sourceTree = "<group>"; };
 		B5584AA9883CA878A633817922F7F74D /* libPods-LFPhoneInfo_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LFPhoneInfo_Example.a"; path = "libPods-LFPhoneInfo_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F3ECEE79F817BBFF29FE5AB4F63B2C /* libLFPhoneInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLFPhoneInfo.a; path = libLFPhoneInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28DEF65916594161B2E7F60FDAF1EAD /* LFReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFReachability.h; path = LFPhoneInfo/Classes/LFReachability.h; sourceTree = "<group>"; };
 		C6C04E5A155B04D679326240E1D51231 /* Pods-LFPhoneInfo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LFPhoneInfo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D37C7242C8DB37BFE401763FBF367386 /* UIDevice+LFDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+LFDeviceInfo.h"; path = "LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.h"; sourceTree = "<group>"; };
+		EE34068CD87BEE2732B65F01C9E6C516 /* LFPhoneInfo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LFPhoneInfo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F0E12A60F8E7BD0329B827C2EFAEA2F2 /* Pods-LFPhoneInfo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFPhoneInfo_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F2804CA16FB4EF74784176F63807EBF5 /* LFReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFReachability.m; path = LFPhoneInfo/Classes/LFReachability.m; sourceTree = "<group>"; };
 		F49D2553C8048692CC98833772B16ED0 /* Pods-LFPhoneInfo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFPhoneInfo_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F5591321777F1B053A658109E05859BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F5AEE4EAAEEA72353468DC15419FC5DC /* Pods-LFPhoneInfo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFPhoneInfo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB28100B883133D4F198B217DA49B94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19F806D00A57EBEC275A666D6390DD23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78058E86C870CADF4D802F8C4E47C60C /* LFPhoneInfo-dummy.m */,
+				32399F9588084409958F2C1E408F7FF7 /* LFPhoneInfo-prefix.pch */,
+				8F3B91B8B37224D6DD52F392152D07F0 /* LFPhoneInfo.debug.xcconfig */,
+				A6F5C00DA50F6AB5B2FB3864BF0E4B34 /* LFPhoneInfo.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LFPhoneInfo";
+			sourceTree = "<group>";
+		};
 		1F2437F892ED3983654F21F6BB015E50 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,42 +113,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		22C1A964354CF70DE6A6910688C01172 /* Pod */ = {
+		46DDD93025F7E3B5D3CA3A71624141AD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4A18B4D064CCBC34DEF8D6A83E554CC7 /* LFPhoneInfo.podspec */,
-				1928890C3A073D7CD6AE2F6F7EBBDD60 /* LICENSE */,
-				616EFA7B236C98715ECCB0D9D1427B2A /* README.md */,
+				EE34068CD87BEE2732B65F01C9E6C516 /* LFPhoneInfo.podspec */,
+				FCB28100B883133D4F198B217DA49B94 /* LICENSE */,
+				F5591321777F1B053A658109E05859BC /* README.md */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		51DD120652F63429901E1021FBE99443 /* LFPhoneInfo */ = {
-			isa = PBXGroup;
-			children = (
-				61F465973F6BFD688681A0BB9FE8356C /* LFPhoneDefine.h */,
-				AA05328FA9AD442060DFFE5299C11C28 /* LFPhoneInfo.h */,
-				45352DE81404222086C80F245434F564 /* LFPhoneInfo.m */,
-				0344DDF834ADA978BA3CC8B7AA973E7C /* LFReachability.h */,
-				F2804CA16FB4EF74784176F63807EBF5 /* LFReachability.m */,
-				D37C7242C8DB37BFE401763FBF367386 /* UIDevice+LFDeviceInfo.h */,
-				874A802A279AC64259EB639C38C6C164 /* UIDevice+LFDeviceInfo.m */,
-				22C1A964354CF70DE6A6910688C01172 /* Pod */,
-				5FA032568210B4B5211ADFC4E424D304 /* Support Files */,
-			);
-			name = LFPhoneInfo;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		5FA032568210B4B5211ADFC4E424D304 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0D8130FB21C4360ED7E6E11FC4831E0 /* LFPhoneInfo.xcconfig */,
-				0E5232C35C4D5944E16079984C26FDB6 /* LFPhoneInfo-dummy.m */,
-				B32FE23D4B0B53E7B870C4A7D2D251BC /* LFPhoneInfo-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LFPhoneInfo";
 			sourceTree = "<group>";
 		};
 		77A7BFBF183B20F16C0EB0174AB12E47 /* Pods-LFPhoneInfo_Tests */ = {
@@ -154,7 +139,7 @@
 		9DB1E50649053E617F3FC89EF58A68E4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				51DD120652F63429901E1021FBE99443 /* LFPhoneInfo */,
+				B75DBC444789F8696177D1388DFB4BEA /* LFPhoneInfo */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -170,6 +155,23 @@
 			);
 			name = "Pods-LFPhoneInfo_Example";
 			path = "Target Support Files/Pods-LFPhoneInfo_Example";
+			sourceTree = "<group>";
+		};
+		B75DBC444789F8696177D1388DFB4BEA /* LFPhoneInfo */ = {
+			isa = PBXGroup;
+			children = (
+				678F10ADB19B391A793677D6D6C2B7A0 /* LFPhoneDefine.h */,
+				6897DF322CFE96697009F7D928ABA248 /* LFPhoneInfo.h */,
+				B16F297E8EA715AB0F321E6F6477D9C1 /* LFPhoneInfo.m */,
+				C28DEF65916594161B2E7F60FDAF1EAD /* LFReachability.h */,
+				21BC301560DEDD4DC76FF190EAB03876 /* LFReachability.m */,
+				996473E0D97B874E2B4F5600438A6E13 /* UIDevice+LFDeviceInfo.h */,
+				A9F34BEFF0D92000681DCA5F801BF91B /* UIDevice+LFDeviceInfo.m */,
+				46DDD93025F7E3B5D3CA3A71624141AD /* Pod */,
+				19F806D00A57EBEC275A666D6390DD23 /* Support Files */,
+			);
+			name = LFPhoneInfo;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -359,9 +361,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		23B85CDC9BE3BD18B321B15ABCF13031 /* Debug */ = {
+		4985B8996B90E9BB21D47B590F385FDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0D8130FB21C4360ED7E6E11FC4831E0 /* LFPhoneInfo.xcconfig */;
+			baseConfigurationReference = A6F5C00DA50F6AB5B2FB3864BF0E4B34 /* LFPhoneInfo.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -379,8 +381,9 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -485,30 +488,6 @@
 			};
 			name = Debug;
 		};
-		6C1C7FB4824D6BC39DB9C5332477094B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0D8130FB21C4360ED7E6E11FC4831E0 /* LFPhoneInfo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LFPhoneInfo/LFPhoneInfo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = LFPhoneInfo;
-				PRODUCT_NAME = LFPhoneInfo;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,6 +573,29 @@
 			};
 			name = Debug;
 		};
+		81A71F7E6DEFB0E6554D2EC0596342C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F3B91B8B37224D6DD52F392152D07F0 /* LFPhoneInfo.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LFPhoneInfo/LFPhoneInfo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LFPhoneInfo;
+				PRODUCT_NAME = LFPhoneInfo;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		AB503970467B0B1039673A16CFD5FA25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F49D2553C8048692CC98833772B16ED0 /* Pods-LFPhoneInfo_Tests.release.xcconfig */;
@@ -640,8 +642,8 @@
 		767DF773FD736ED40083ABEE8509290E /* Build configuration list for PBXNativeTarget "LFPhoneInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23B85CDC9BE3BD18B321B15ABCF13031 /* Debug */,
-				6C1C7FB4824D6BC39DB9C5332477094B /* Release */,
+				81A71F7E6DEFB0E6554D2EC0596342C4 /* Debug */,
+				4985B8996B90E9BB21D47B590F385FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
