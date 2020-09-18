@@ -152,16 +152,28 @@
     return usedDisk;
 }
 
-/**
- * 通过系统框架获取设备运营商，返回值可能不准确
- * e.g. @"中国移动" @"中国联通" @"中国电信" nil
- */
-+ (void)setDeviceCarrierName:(NSString *)deviceCarrierName{}
-+ (NSString *)deviceCarrierName{
+/// 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为空数组，也可能返回
+/// e.g. @[@"中国移动" @"中国联通"]，或 @[@"中国电信"]  或 @[]
+//+ (void)setDeviceCarrierList:(NSArray<NSString *> *)deviceCarrierList{}
++ (NSArray<NSString *> *)deviceCarrierList{
     CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
-    NSString *carrierName = [carrier carrierName];
-    return carrierName;
+    NSMutableArray<NSString *> *tmpList = [NSMutableArray array];
+    if (@available(iOS 12.0, *)) {
+        NSDictionary *infoDict = telephonyInfo.serviceSubscriberCellularProviders;
+        // iOS 12 以上可能为双卡
+        for (CTCarrier *tmpCT in infoDict.allValues) {
+            if (tmpCT.mobileCountryCode && tmpCT.mobileNetworkCode && tmpCT.carrierName) {
+                [tmpList addObject:tmpCT.carrierName];
+            }
+        }
+        return tmpList.copy;
+    }
+    // iOS 12 以下为单卡
+    CTCarrier *carrier = telephonyInfo.subscriberCellularProvider;
+    if (carrier.mobileCountryCode && carrier.mobileNetworkCode && carrier.carrierName) {
+        [tmpList addObject:carrier.carrierName];
+    }
+    return tmpList.copy;
 }
 
 // 当前设备的 CPU 数量
@@ -204,6 +216,28 @@
             return LFCPUTypeUnkown;
             break;
     }
+}
+
+
++ (void)setDeviceSIMCount:(NSInteger)deviceSIMCount{}
++ (NSInteger)deviceSIMCount{
+    CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+    NSInteger simCount = 0;
+    if (@available(iOS 12.0, *)) {
+        NSDictionary *infoDict = telephonyInfo.serviceSubscriberCellularProviders;
+        for (CTCarrier *tmpCT in infoDict.allValues) {
+            if (tmpCT.mobileCountryCode && tmpCT.mobileNetworkCode) {
+                simCount += 1;
+            }
+        }
+        return simCount;
+    }
+    // iOS 12 以下为单卡
+    CTCarrier *carrier = telephonyInfo.subscriberCellularProvider;
+    if (carrier.mobileCountryCode && carrier.mobileNetworkCode) {
+        simCount += 1;
+    }
+    return simCount;
 }
 
 // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"

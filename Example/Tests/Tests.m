@@ -74,17 +74,15 @@
     XCTAssertTrue(LFPhoneInfo.deviceFreeDisk > 0, @"The device free disk space is greater than zero.");
     // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
     XCTAssertTrue(LFPhoneInfo.deviceUsedDisk > 0, @"The device has used a disk larger than zero.");
-    /**
-     * 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为 nil，也可能为其他值
-     * e.g. @"中国移动" @"中国联通" @"中国电信" nil
-     */
-    BOOL carrierNameBySys = LFPhoneInfo.deviceCarrierName || !LFPhoneInfo.deviceCarrierName;
-    XCTAssertTrue(carrierNameBySys, @"Obtain the carrier name through the system.");
+    // @[@"中国移动" @"中国联通"] 或 @[]
+    XCTAssertTrue(LFPhoneInfo.deviceCarrierList.count==0, @"carrier name is nil.");
     // 当前设备的 CPU 数量
     XCTAssertTrue(LFPhoneInfo.deviceCPUNum > 0, @"The number of CPUs of the device is not 0.");
     // 当前设备的 CPU 类型枚举LFCPUTypeX86_64
     BOOL cpuTypeIsEqual = (LFPhoneInfo.deviceCPUType == LFCPUTypeX86_64) || (LFPhoneInfo.deviceCPUType == LFCPUTypeX86) || (LFPhoneInfo.deviceCPUType == LFCPUTypeUnkown);
     XCTAssertTrue(cpuTypeIsEqual, @"The emulator CPU type should be of the X86 type.");
+    // SIM 卡个数
+    XCTAssertTrue(LFPhoneInfo.deviceSIMCount==0, @"The number of CPUs of the device is not 0.");
     // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE"
     XCTAssertTrue([LFPhoneInfo.deviceNetType isEqualToString:@"Wi-Fi"], @"The simulator net should be Wi-Fi.");
     // 当前设备局域网 ip 地址

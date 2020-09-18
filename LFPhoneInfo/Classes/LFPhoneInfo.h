@@ -49,15 +49,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, readonly) CGFloat deviceFreeDisk;
 // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
 @property(class, readonly) CGFloat deviceUsedDisk;
-/**
- * 通过系统框架获取设备运营商，未安装 SIM 时返回值大概率为 nil，也可能为其他值
- * e.g. @"中国移动" @"中国联通" @"中国电信" nil
- */
-@property(class, readonly) NSString *deviceCarrierName;
+
+/// 通过系统框架获取设备运营商，未安装 SIM 时返回空数组
+/// e.g. @[@"中国移动" @"中国联通"]，或 @[@"中国电信"]  或 @[]
+@property(class, readonly) NSArray<NSString *> *deviceCarrierList;
+
 // 当前设备的 CPU 数量
 @property(class, readonly) NSInteger deviceCPUNum;
 // 当前设备的 CPU 类型枚举
 @property(class, readonly) LFCPUType deviceCPUType;
+// 当前设备的 SIM 卡数量，eg. 0 1 2
+@property(class, readonly) NSInteger deviceSIMCount;
 // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
 @property(class, readonly) NSString *deviceNetType;
 // 当前设备局域网 ip 地址

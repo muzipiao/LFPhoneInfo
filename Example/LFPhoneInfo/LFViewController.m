@@ -68,21 +68,23 @@
     self.labelArray[14].text = [NSString stringWithFormat:@"设备剩余存储：%.1f MB",LFPhoneInfo.deviceFreeDisk];
     // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
     self.labelArray[15].text = [NSString stringWithFormat:@"设备已用存储：%.1f MB",LFPhoneInfo.deviceUsedDisk];
-    
     // 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
-    self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商：%@",LFPhoneInfo.deviceCarrierName];
+    NSString *carrieName = [NSString stringWithFormat:@"%@,%@",LFPhoneInfo.deviceCarrierList.firstObject, LFPhoneInfo.deviceCarrierList.lastObject];
+    self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商：%@",carrieName];
     // 当前设备的 CPU 数量
     self.labelArray[17].text = [NSString stringWithFormat:@"CPU 个数：%ld",(long)LFPhoneInfo.deviceCPUNum];
+    // 当前 SIM 个数
+    self.labelArray[18].text = [NSString stringWithFormat:@"SIM 个数：%ld",(long)LFPhoneInfo.deviceSIMCount];
     // 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
-    self.labelArray[18].text = [NSString stringWithFormat:@"网络状态：%@",LFPhoneInfo.deviceNetType];
+    self.labelArray[19].text = [NSString stringWithFormat:@"网络状态：%@",LFPhoneInfo.deviceNetType];
     // 当前设备局域网 ip 地址
-    self.labelArray[19].text = [NSString stringWithFormat:@"局域网 IP 地址：%@",LFPhoneInfo.deviceLANIp];
+    self.labelArray[20].text = [NSString stringWithFormat:@"局域网 IP 地址：%@",LFPhoneInfo.deviceLANIp];
     // 当前 APP 最近的一次更新时间(或安装时间) e.g. @"2019-06-01 12:32:38 +0000"
-    self.labelArray[20].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
+    self.labelArray[21].text = [NSString stringWithFormat:@"App 更新时间：%@",LFPhoneInfo.appUpdateDate];
     // 当前设备是否越狱,模拟器会认为已经越狱
-    self.labelArray[21].text = [NSString stringWithFormat:@"是否越狱：%@",LFPhoneInfo.deviceIsJailbreak?@"是":@"否"];
+    self.labelArray[22].text = [NSString stringWithFormat:@"是否越狱：%@",LFPhoneInfo.deviceIsJailbreak?@"是":@"否"];
     // 当前设备是否使用网络代理, YES 是使用，NO 为未使用
-    self.labelArray[22].text = [NSString stringWithFormat:@"是否使用代理：%@",LFPhoneInfo.deviceIsUseProxy?@"是":@"否"];
+    self.labelArray[23].text = [NSString stringWithFormat:@"是否使用代理：%@",LFPhoneInfo.deviceIsUseProxy?@"是":@"否"];
 }
 
 //创建label
