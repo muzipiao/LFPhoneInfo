@@ -361,6 +361,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4985B8996B90E9BB21D47B590F385FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F5C00DA50F6AB5B2FB3864BF0E4B34 /* LFPhoneInfo.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LFPhoneInfo/LFPhoneInfo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LFPhoneInfo;
+				PRODUCT_NAME = LFPhoneInfo;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -549,16 +573,16 @@
 			};
 			name = Debug;
 		};
-		969B028BCB76AE822A4A6C66AD40F607 /* Release */ = {
+		81A71F7E6DEFB0E6554D2EC0596342C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6F5C00DA50F6AB5B2FB3864BF0E4B34 /* LFPhoneInfo.release.xcconfig */;
+			baseConfigurationReference = 8F3B91B8B37224D6DD52F392152D07F0 /* LFPhoneInfo.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/LFPhoneInfo/LFPhoneInfo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -569,9 +593,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		AB503970467B0B1039673A16CFD5FA25 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -594,29 +617,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		BC14A0CAB300EC832DF3FB591AA3F861 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F3B91B8B37224D6DD52F392152D07F0 /* LFPhoneInfo.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LFPhoneInfo/LFPhoneInfo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = LFPhoneInfo;
-				PRODUCT_NAME = LFPhoneInfo;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -642,8 +642,8 @@
 		767DF773FD736ED40083ABEE8509290E /* Build configuration list for PBXNativeTarget "LFPhoneInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC14A0CAB300EC832DF3FB591AA3F861 /* Debug */,
-				969B028BCB76AE822A4A6C66AD40F607 /* Release */,
+				81A71F7E6DEFB0E6554D2EC0596342C4 /* Debug */,
+				4985B8996B90E9BB21D47B590F385FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

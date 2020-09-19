@@ -1,5 +1,5 @@
 PODS:
-  - LFPhoneInfo (0.1.6)
+  - LFPhoneInfo (0.1.7)
 
 DEPENDENCIES:
   - LFPhoneInfo (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LFPhoneInfo: 8a7c8e279e80c420a628801932c9a02bde63e5f4
+  LFPhoneInfo: 9decd041505276d8a418bf5ce0b8f65fb46cdbc8
 
 PODFILE CHECKSUM: 42fb8472117f83f34334deedc79ec15a754b0257
 
