@@ -69,7 +69,10 @@
     // 当前磁盘已经使用，返回值为兆 MB，0为异常 e.g. 已使用 2200 MB
     self.labelArray[15].text = [NSString stringWithFormat:@"设备已用存储：%.1f MB",LFPhoneInfo.deviceUsedDisk];
     // 通过系统框架获取设备运营商 e.g. @"中国移动" @"中国联通" @"中国电信"
-    NSString *carrieName = [NSString stringWithFormat:@"%@,%@",LFPhoneInfo.deviceCarrierList.firstObject, LFPhoneInfo.deviceCarrierList.lastObject];
+    NSString *carrieName = LFPhoneInfo.deviceCarrierList.firstObject;
+    if (LFPhoneInfo.deviceSIMCount > 1) {
+        carrieName = [NSString stringWithFormat:@"%@,%@",LFPhoneInfo.deviceCarrierList.firstObject, LFPhoneInfo.deviceCarrierList.lastObject];
+    }
     self.labelArray[16].text = [NSString stringWithFormat:@"网络运营商：%@",carrieName];
     // 当前设备的 CPU 数量
     self.labelArray[17].text = [NSString stringWithFormat:@"CPU 个数：%ld",(long)LFPhoneInfo.deviceCPUNum];
