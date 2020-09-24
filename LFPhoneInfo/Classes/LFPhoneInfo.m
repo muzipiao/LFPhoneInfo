@@ -262,37 +262,59 @@
     if (status != LFReachableViaWWAN) {
         return networktype;
     }
-    // 如果是移动网络，判断具体
-    NSString *wwanNetType = nil;
+    // 如果是移动网络，iOS 12 以上判断双卡，iOS 12 以下判断单卡
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    if (@available(iOS 12.0, *)) {
+        NSDictionary *infoDict = info.serviceCurrentRadioAccessTechnology;
+        if (infoDict.allValues.count == 0) {
+            return @"";
+        }
+        if (infoDict.allValues.count == 1) {
+            return [self matchWWANType:infoDict.allValues.firstObject];
+        }
+        NSMutableString *tmpMStr = [NSMutableString string];
+        for (NSString *tmpStatus in infoDict.allValues) {
+            NSString *tmpNetType = [self matchWWANType:tmpStatus];
+            if (tmpMStr.length > 0) {
+                [tmpMStr appendString:@","];
+            }
+            if (tmpNetType) {
+                [tmpMStr appendString:tmpNetType];
+            }
+        }
+        return tmpMStr.copy;
+    }
+    // iOS 12 以下只有单卡
     NSString *currentStatus = info.currentRadioAccessTechnology;
-    if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyGPRS"]) {
-        wwanNetType = @"GPRS";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyEdge"]) {
-        wwanNetType = @"2.75G EDGE";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyWCDMA"]){
-        wwanNetType = @"3G";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSDPA"]){
-        wwanNetType = @"3.5G HSDPA";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSUPA"]){
-        wwanNetType = @"3.5G HSUPA";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMA1x"]){
-        wwanNetType = @"2G";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORev0"]){
-        wwanNetType = @"3G";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevA"]){
-        wwanNetType = @"3G";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevB"]){
-        wwanNetType = @"3G";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyeHRPD"]){
-        wwanNetType = @"HRPD";
-    }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyLTE"]){
-        wwanNetType = @"4G";
+    return [self matchWWANType:currentStatus];
+}
+
++ (NSString *)matchWWANType:(NSString *)netStatus{
+    NSString *wwanNetType = netStatus;
+    if ([netStatus isEqualToString:@"CTRadioAccessTechnologyGPRS"]) {
+        wwanNetType = @"2G GPRS";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMA1x"]){
+        wwanNetType = @"2G CDMA1x";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyEdge"]) {
+        wwanNetType = @"2G EDGE";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyWCDMA"]){
+        wwanNetType = @"3G WCDMA";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyHSDPA"]){
+        wwanNetType = @"3G HSDPA";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyHSUPA"]){
+        wwanNetType = @"3G HSUPA";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORev0"]){
+        wwanNetType = @"3G CDMAEVDORev0";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevA"]){
+        wwanNetType = @"3G CDMAEVDORevA";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevB"]){
+        wwanNetType = @"3G CDMAEVDORevB";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyeHRPD"]){
+        wwanNetType = @"3G HRPD";
+    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyLTE"]){
+        wwanNetType = @"4G LTE";
     }
-    if (wwanNetType) {
-        networktype = wwanNetType;
-    }
-    return networktype;
+    return wwanNetType;
 }
 
 // 当前设备局域网 ip 地址，只读取IPV4地址

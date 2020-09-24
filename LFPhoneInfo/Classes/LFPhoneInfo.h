@@ -58,7 +58,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, readonly) LFCPUType deviceCPUType;
 // 当前设备的 SIM 卡数量，eg. 0 1 2
 @property(class, readonly) NSInteger deviceSIMCount;
-// 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G" @"3G" @"4G" @"LTE" @"WWAN"
+// 当前设备网络状态 e.g. @"WiFi" @"无服务" @"2G EDGE" @"3G HRPD" @"4G LTE"
+// 当设备使用移动网络，且为双卡时，返回双卡网络状态，但无法区分使用的哪张卡数据 e.g. @"3G HRPD,4G LTE"
 @property(class, readonly) NSString *deviceNetType;
 // 当前设备局域网 ip 地址
 @property(class, readonly) NSString *deviceLANIp;
