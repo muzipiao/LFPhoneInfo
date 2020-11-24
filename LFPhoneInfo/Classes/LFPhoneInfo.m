@@ -59,6 +59,16 @@
     return [UIDevice getDeviceIsIPhone];
 }
 
+// 判断当前设备是不是iPhone X 系列，YES 是 iPhone X 系列，NO不是
++ (void)setDeviceIsIPhoneX:(BOOL)deviceIsIPhoneX{}
++ (BOOL)deviceIsIPhoneX {
+    if (@available(iOS 11.0, *)) {
+        CGFloat bottom = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom;
+        return (bottom > 0);
+    }
+    return NO;
+}
+
 // 判断当前设备是不是iPad，YES 是 iPad 设备，NO不是
 + (void)setDeviceIsIPad:(BOOL)deviceIsIPad{}
 + (BOOL)deviceIsIPad{

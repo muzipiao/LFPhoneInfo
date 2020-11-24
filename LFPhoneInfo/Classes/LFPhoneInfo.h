@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, readonly) NSString *deviceSettingName;
 // 判断当前设备是不是iPhone，YES 是 iPhone 设备，NO不是
 @property(class, readonly) BOOL deviceIsIPhone;
+// 判断当前设备是不是iPhone X 系列，YES 是 iPhone X 系列，NO不是
+@property(class, readonly) BOOL deviceIsIPhoneX;
 // 判断当前设备是不是iPad，YES 是 iPad 设备，NO不是
 @property(class, readonly) BOOL deviceIsIPad;
 // 判断当前设备是不是iPod，YES 是 iPod 设备，NO不是
