@@ -71,6 +71,7 @@
                             return window.safeAreaInsets.bottom > 0;
                         }
                     }
+                    return windowScene.windows.firstObject.safeAreaInsets.bottom > 0;
                 }
             }
         } else {
