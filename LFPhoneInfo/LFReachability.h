@@ -12,9 +12,9 @@
 
 
 typedef enum : NSInteger {
-	LFNotReachable = 0,
-	LFReachableViaWiFi,
-	LFReachableViaWWAN
+    LFNotReachable = 0,
+    LFReachableViaWiFi,
+    LFReachableViaWWAN
 } LFNetworkStatus;
 
 #pragma mark IPv6 Support

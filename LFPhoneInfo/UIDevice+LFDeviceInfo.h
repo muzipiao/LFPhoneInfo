@@ -10,7 +10,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "LFPhoneDefine.h"
+#import <LFPhoneDefine.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

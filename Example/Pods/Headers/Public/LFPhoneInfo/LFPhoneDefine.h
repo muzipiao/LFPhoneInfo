@@ -1,1 +1,1 @@
-../../../../../LFPhoneInfo/Classes/LFPhoneDefine.h
+../../../../../LFPhoneInfo/LFPhoneDefine.h

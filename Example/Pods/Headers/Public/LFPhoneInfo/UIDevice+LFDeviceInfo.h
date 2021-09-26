@@ -1,1 +1,1 @@
-../../../../../LFPhoneInfo/Classes/UIDevice+LFDeviceInfo.h
+../../../../../LFPhoneInfo/UIDevice+LFDeviceInfo.h

@@ -65,14 +65,12 @@
     if (@available(iOS 11.0, *)) {
         if (@available(iOS 13.0, *)) {
             for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
-                if (windowScene.activationState == UISceneActivationStateForegroundActive) {
-                    for (UIWindow *window in windowScene.windows) {
-                        if (window.isKeyWindow) {
-                            return window.safeAreaInsets.bottom > 0;
-                        }
+                for (UIWindow *window in windowScene.windows) {
+                    if (window.isKeyWindow) {
+                        return window.safeAreaInsets.bottom > 0;
                     }
-                    return windowScene.windows.firstObject.safeAreaInsets.bottom > 0;
                 }
+                return windowScene.windows.firstObject.safeAreaInsets.bottom > 0;
             }
         } else {
             return [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom > 0;
