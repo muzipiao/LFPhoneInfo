@@ -39,8 +39,8 @@ jobs:
           rm -rf ~/Library/Developer/Xcode/DerivedData/
           echo Run the tests
           xcodebuild test -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfo-Example' -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
-          cd ..
+          cd .. && pwd
       # 第四步，通知codecov
       - name: Notify codecov
         run: |
-          bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }} -G "LFPhoneInfo"
+          bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }} -G ./LFPhoneInfo/
