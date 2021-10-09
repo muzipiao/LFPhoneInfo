@@ -45,8 +45,6 @@
     XCTAssertTrue(LFPhoneInfo.deviceSettingName.length > 0, @"The device user name should not be empty.");
     // 判断当前设备是不是iPhone，YES 是 iPhone 设备，NO不是
     XCTAssertFalse(LFPhoneInfo.deviceIsIPhone, @"The device type should be the iPhone simulator.");
-    // 判断当前设备是不是iPhone X 系列，YES 是 iPhone X 系列（刘海屏），NO不是
-    XCTAssertTrue(LFPhoneInfo.deviceIsIPhoneX, @"The device type should be the iPhone X series.");
     // 判断当前设备是不是iPad，YES 是 iPad 设备，NO不是
     XCTAssertFalse(LFPhoneInfo.deviceIsIPad, @"The device type should be the iPhone simulator.");
     // 判断当前设备是不是iPod，YES 是 iPod 设备，NO不是
@@ -58,9 +56,9 @@
     BOOL batteryLevelNumIsNormal = (batteryLevelNum<=1 && batteryLevelNum>=0) || (batteryLevelNum==-1);
     XCTAssertTrue(batteryLevelNumIsNormal, @"The device battery level should be within the normal range.");
     // 屏幕逻辑尺寸 e.g. 逻辑像素尺寸为 2208x1242（屏幕实际物理像素尺寸是 1920x1080）
-    CGSize device12Size = LFPhoneInfo.deviceLogicalScreenSize;
-    BOOL isEqualIPhone12Screen = (device12Size.width == 1170) && (device12Size.height == 2532);
-    XCTAssertTrue(isEqualIPhone12Screen, @"The iPhone 12 screen size should be 1170*2532px.");
+    CGSize deviceSize = LFPhoneInfo.deviceLogicalScreenSize;
+    BOOL isDeivceSizeZero = CGSizeEqualToSize(deviceSize, CGSizeZero);
+    XCTAssertFalse(isDeivceSizeZero, @"The iPhone 12 screen size should be 1170*2532px.");
     // 当前设备总内存, 返回值为兆 MB, e.g. iPhone 总内存为 2048 MB
     XCTAssertTrue(LFPhoneInfo.deviceTotalMemory > 0, @"The emulator returns memory as the carrier memory.");
     // 当前 App 占用的设备内存，返回值为兆 MB, e.g. 占用 43 MB
