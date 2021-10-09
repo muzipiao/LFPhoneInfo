@@ -18,7 +18,8 @@ jobs:
       # 第二步，安装所需环境
       - name: Install
         run: |
-          env && locale
+          env
+          locale
           gem install cocoapods --no-document --quiet
           gem install xcpretty --no-document --quiet
           pod --version
@@ -38,8 +39,8 @@ jobs:
           echo Clean DerivedData
           rm -rf ~/Library/Developer/Xcode/DerivedData/
           echo Run the tests
-          xcodebuild test -workspace GMObjC.xcworkspace -scheme 'LFPhoneInfo-Example' -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
+          xcodebuild test -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfo-Example' -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
       # 第四步，通知codecov
       - name: Notify codecov
         run: |
-          bash <(curl -s https://codecov.io/bash)
+          bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}
