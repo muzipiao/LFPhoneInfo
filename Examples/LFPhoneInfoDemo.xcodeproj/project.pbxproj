@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		312F8FFE4685CA512855E7B5 /* libPods-Tests iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 605E9A6179B836C228FCB739 /* libPods-Tests iOS.a */; };
 		9C41AAD82711975A0005BCE6 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C41AAD72711975A0005BCE6 /* Tests.m */; };
 		9C978C672711916100DE3203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C978C662711916100DE3203 /* Assets.xcassets */; };
 		9C978C6A2711916100DE3203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C978C682711916100DE3203 /* LaunchScreen.storyboard */; };
 		9C978C6D2711916100DE3203 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C978C6C2711916100DE3203 /* main.m */; };
 		9C978C77271191E700DE3203 /* LFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C978C73271191E700DE3203 /* LFViewController.m */; };
 		9C978C78271191E700DE3203 /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C978C75271191E700DE3203 /* LFAppDelegate.m */; };
+		C9D0810C2DB336AF3092F1D5 /* libPods-Tests-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0A21E8BD725406A25A46D1 /* libPods-Tests-iOS.a */; };
 		D9A308228175C6E6F6C21AA9 /* libPods-LFPhoneInfoDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9723BABEDA1685770ACEAE /* libPods-LFPhoneInfoDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		372C3EF38DFE030B09860511 /* Pods-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		53DB360B31F5BC1EC90E5086 /* Pods-LFPhoneInfoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfoDemo.release.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfoDemo/Pods-LFPhoneInfoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5A9723BABEDA1685770ACEAE /* libPods-LFPhoneInfoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFPhoneInfoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		605E9A6179B836C228FCB739 /* libPods-Tests iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0A21E8BD725406A25A46D1 /* libPods-Tests-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7174D16DD6279BB75AA9823D /* Pods-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-iOS.release.xcconfig"; path = "Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9C41AAD72711975A0005BCE6 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		9C978C572711915F00DE3203 /* LFPhoneInfoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFPhoneInfoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C978C662711916100DE3203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		9C978C74271191E700DE3203 /* LFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFViewController.h; sourceTree = "<group>"; };
 		9C978C75271191E700DE3203 /* LFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAppDelegate.m; sourceTree = "<group>"; };
 		9C978C76271191E700DE3203 /* LFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAppDelegate.h; sourceTree = "<group>"; };
-		9C978C7D271192C200DE3203 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C978C7D271192C200DE3203 /* Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51DDAA0FA3ED9541B687CAA /* Pods-LFPhoneInfoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFPhoneInfoDemo.debug.xcconfig"; path = "Target Support Files/Pods-LFPhoneInfoDemo/Pods-LFPhoneInfoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C97A123EA525BC751B21BADA /* Pods-Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.release.xcconfig"; path = "Target Support Files/Pods-Tests iOS/Pods-Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FD0E9E11E232C125F9B4BF62 /* Pods-Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.debug.xcconfig"; path = "Target Support Files/Pods-Tests iOS/Pods-Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312F8FFE4685CA512855E7B5 /* libPods-Tests iOS.a in Frameworks */,
+				C9D0810C2DB336AF3092F1D5 /* libPods-Tests-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,8 @@
 				53DB360B31F5BC1EC90E5086 /* Pods-LFPhoneInfoDemo.release.xcconfig */,
 				FD0E9E11E232C125F9B4BF62 /* Pods-Tests iOS.debug.xcconfig */,
 				C97A123EA525BC751B21BADA /* Pods-Tests iOS.release.xcconfig */,
+				372C3EF38DFE030B09860511 /* Pods-Tests-iOS.debug.xcconfig */,
+				7174D16DD6279BB75AA9823D /* Pods-Tests-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -83,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9723BABEDA1685770ACEAE /* libPods-LFPhoneInfoDemo.a */,
-				605E9A6179B836C228FCB739 /* libPods-Tests iOS.a */,
+				5B0A21E8BD725406A25A46D1 /* libPods-Tests-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9C978C572711915F00DE3203 /* LFPhoneInfoDemo.app */,
-				9C978C7D271192C200DE3203 /* Tests iOS.xctest */,
+				9C978C7D271192C200DE3203 /* Tests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +156,9 @@
 			productReference = 9C978C572711915F00DE3203 /* LFPhoneInfoDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C978C7C271192C200DE3203 /* Tests iOS */ = {
+		9C978C7C271192C200DE3203 /* Tests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C978C83271192C200DE3203 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildConfigurationList = 9C978C83271192C200DE3203 /* Build configuration list for PBXNativeTarget "Tests-iOS" */;
 			buildPhases = (
 				0C7E7E1C0DC152EC6369C2EE /* [CP] Check Pods Manifest.lock */,
 				9C978C79271192C200DE3203 /* Sources */,
@@ -166,9 +170,9 @@
 			dependencies = (
 				9C978C82271192C200DE3203 /* PBXTargetDependency */,
 			);
-			name = "Tests iOS";
+			name = "Tests-iOS";
 			productName = "Tests iOS";
-			productReference = 9C978C7D271192C200DE3203 /* Tests iOS.xctest */;
+			productReference = 9C978C7D271192C200DE3203 /* Tests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +207,7 @@
 			projectRoot = "";
 			targets = (
 				9C978C562711915F00DE3203 /* LFPhoneInfoDemo */,
-				9C978C7C271192C200DE3203 /* Tests iOS */,
+				9C978C7C271192C200DE3203 /* Tests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -243,7 +247,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tests iOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tests-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -433,10 +437,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LFPhoneInfoDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -448,9 +452,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifei.phoneinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = jingquezhili;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,10 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9CA5KUE8T7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LFPhoneInfoDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -477,9 +481,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jinher.jingquezhili;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifei.phoneinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = jingquezhili;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,7 +491,7 @@
 		};
 		9C978C84271192C200DE3203 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD0E9E11E232C125F9B4BF62 /* Pods-Tests iOS.debug.xcconfig */;
+			baseConfigurationReference = 372C3EF38DFE030B09860511 /* Pods-Tests-iOS.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -509,7 +513,7 @@
 		};
 		9C978C85271192C200DE3203 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C97A123EA525BC751B21BADA /* Pods-Tests iOS.release.xcconfig */;
+			baseConfigurationReference = 7174D16DD6279BB75AA9823D /* Pods-Tests-iOS.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -550,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C978C83271192C200DE3203 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+		9C978C83271192C200DE3203 /* Build configuration list for PBXNativeTarget "Tests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C978C84271192C200DE3203 /* Debug */,

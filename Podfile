@@ -8,7 +8,7 @@ target 'LFPhoneInfoDemo' do
   pod 'LFPhoneInfo', :path => './'
 end
 
-target 'Tests iOS' do
+target 'Tests-iOS' do
   project example_project_path
   platform :ios, '9.0'
   pod 'LFPhoneInfo', :path => './'
