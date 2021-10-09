@@ -33,13 +33,12 @@ jobs:
           set -o pipefail
           echo Check if the library described by the podspec can be built
           pod lib lint --allow-warnings --skip-tests
-          cd Example && pod install
-          xcodebuild build -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfo-Example' -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug CODE_SIGNING_ALLOWED=NO | xcpretty -c
+          pod install
+          xcodebuild build -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfoDemo' -destination 'platform=iOS Simulator,name=iPhone 12' -configuration Debug CODE_SIGNING_ALLOWED=NO | xcpretty -c
           echo Clean DerivedData
           rm -rf ~/Library/Developer/Xcode/DerivedData/
           echo Run the tests
-          xcodebuild test -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfo-Example' -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
-          cd .. && pwd && ls
+          xcodebuild test -workspace LFPhoneInfo.xcworkspace -scheme 'LFPhoneInfoDemo' -destination 'platform=iOS Simulator,name=iPhone 12' -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
       # 第四步，通知codecov
       - name: Notify codecov
         run: |
