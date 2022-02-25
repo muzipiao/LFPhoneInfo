@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LFPhoneInfo'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'iOS 快速获取设备信息。'
   s.description      = <<-DESC
                         LFPhoneInfo 可通过一行代码快速获取设备各种信息的工具类。

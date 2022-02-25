@@ -286,23 +286,21 @@
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
     if (@available(iOS 12.0, *)) {
         NSDictionary *infoDict = info.serviceCurrentRadioAccessTechnology;
+        NSString *wwanType = @"";
         if (infoDict.allValues.count == 0) {
-            return @"";
+            return wwanType;
         }
         if (infoDict.allValues.count == 1) {
-            return [self matchWWANType:infoDict.allValues.firstObject];
+            wwanType = [self matchWWANType:infoDict.allValues.firstObject];
+            return wwanType;
         }
-        NSMutableString *tmpMStr = [NSMutableString string];
+        NSMutableArray<NSString *> *mList = [NSMutableArray arrayWithCapacity:2];
         for (NSString *tmpStatus in infoDict.allValues) {
             NSString *tmpNetType = [self matchWWANType:tmpStatus];
-            if (tmpMStr.length > 0) {
-                [tmpMStr appendString:@","];
-            }
-            if (tmpNetType) {
-                [tmpMStr appendString:tmpNetType];
-            }
+            [mList addObject:tmpNetType];
         }
-        return tmpMStr.copy;
+        wwanType = [mList componentsJoinedByString:@","];
+        return wwanType;
     }
     // iOS 12 以下只有单卡
     NSString *currentStatus = info.currentRadioAccessTechnology;
@@ -310,31 +308,33 @@
 }
 
 + (NSString *)matchWWANType:(NSString *)netStatus{
-    NSString *wwanNetType = netStatus;
-    if ([netStatus isEqualToString:@"CTRadioAccessTechnologyGPRS"]) {
-        wwanNetType = @"2G GPRS";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMA1x"]){
-        wwanNetType = @"2G CDMA1x";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyEdge"]) {
-        wwanNetType = @"2G EDGE";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyWCDMA"]){
-        wwanNetType = @"3G WCDMA";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyHSDPA"]){
-        wwanNetType = @"3G HSDPA";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyHSUPA"]){
-        wwanNetType = @"3G HSUPA";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORev0"]){
-        wwanNetType = @"3G CDMAEVDORev0";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevA"]){
-        wwanNetType = @"3G CDMAEVDORevA";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevB"]){
-        wwanNetType = @"3G CDMAEVDORevB";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyeHRPD"]){
-        wwanNetType = @"3G HRPD";
-    }else if ([netStatus isEqualToString:@"CTRadioAccessTechnologyLTE"]){
-        wwanNetType = @"4G LTE";
+    if (@available(iOS 14.1, *)) {
+        NSArray *net5G = @[CTRadioAccessTechnologyNRNSA, CTRadioAccessTechnologyNR];
+        if ([net5G containsObject:netStatus]) {
+            return @"5G";
+        }
     }
-    return wwanNetType;
+    NSArray *net4G = @[CTRadioAccessTechnologyLTE];
+    if ([net4G containsObject:netStatus]) {
+        return @"4G";
+    }
+    NSArray *net3G = @[CTRadioAccessTechnologyHSDPA,
+                       CTRadioAccessTechnologyWCDMA,
+                       CTRadioAccessTechnologyHSUPA,
+                       CTRadioAccessTechnologyCDMAEVDORev0,
+                       CTRadioAccessTechnologyCDMAEVDORevA,
+                       CTRadioAccessTechnologyCDMAEVDORevB,
+                       CTRadioAccessTechnologyeHRPD];
+    if ([net3G containsObject:netStatus]) {
+        return @"3G";
+    }
+    NSArray *net2G = @[CTRadioAccessTechnologyEdge,
+                       CTRadioAccessTechnologyGPRS,
+                       CTRadioAccessTechnologyCDMA1x];
+    if ([net2G containsObject:netStatus]) {
+        return @"2G";
+    }
+    return netStatus ? netStatus : @"";
 }
 
 // 当前设备局域网 ip 地址，只读取IPV4地址
